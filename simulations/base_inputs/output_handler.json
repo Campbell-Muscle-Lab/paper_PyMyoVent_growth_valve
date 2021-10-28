@@ -1,0 +1,15 @@
+{
+    "templated_images":
+    [
+        {
+            "relative_path": true,
+            "template_file_string": "../template/growth_AS.json",
+            "output_file_string": "../sim_output/growth_ATPase_AS_200.png"
+        },
+        {
+            "relative_path": true,
+            "template_file_string": "../template/pv_AS.json",
+            "output_file_string": "../sim_output/pv_AS_200.png"
+        }
+    ]
+}

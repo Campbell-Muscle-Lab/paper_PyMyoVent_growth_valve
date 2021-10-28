@@ -1,0 +1,49 @@
+{
+    "layout":
+    {
+        "fig_width": 7,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 8,
+        "grid_wspace": 1,
+        "grid_hspace": 1
+    },
+    "x_display":{
+        "global_x_field": "volume_ventricle",
+        "label": "Volume (ml)",
+        "ticks": [0,0.07,0.14,0.20,0.3]
+    },
+    "processing":{
+        "envelope_rel_width": 0.02
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 10,
+        "y_label_fontsize": 10,
+        "tick_fontsize": 7,
+        "legend_fontsize": 6,
+        "label_fontsize": 3,
+        "y_label_pad": 10,
+        "bbox_to_anchor": [1.3, 1],
+        "patch_alpha": 0.3
+    },
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Arterial\npressure\n(mm Hg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_ventricle",
+                        "field_label": "Pressure",
+                        "style": "line"
+                    }
+                ]
+            }
+        }
+    ]
+}

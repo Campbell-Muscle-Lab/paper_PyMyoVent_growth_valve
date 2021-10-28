@@ -1,0 +1,22 @@
+{
+    "job":
+    [
+
+    {
+      "relative_path": true,
+      "model_file_string": "growth_ATPase/sim_input/new_model.json",
+      "protocol_file_string": "growth_ATPase/sim_input/protocol_AS.json",
+      "sim_options_file_string": "growth_ATPase/sim_input/options.json",
+      "output_handler_file_string": "growth_ATPase/sim_input/output_handler_AS.json",
+      "sim_results_file_string" : "growth_ATPase/sim_output/sim_output_3states.csv"
+    },
+    {
+      "relative_path": true,
+      "model_file_string": "growth_stress/sim_input/model_stress_faster_concentric.json",
+      "protocol_file_string": "growth_stress/sim_input/protocol_AS.json",
+      "sim_options_file_string": "growth_stress/sim_input/options.json",
+      "output_handler_file_string": "growth_stress/sim_input/output_handler_AS.json",
+      "sim_results_file_string" : "growth_stress/sim_output/sim_output_AS.csv"
+    }
+  ]
+}
