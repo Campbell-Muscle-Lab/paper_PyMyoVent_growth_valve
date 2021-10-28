@@ -1,0 +1,382 @@
+{
+    "layout":
+    {
+        "fig_width": 12,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 2,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)",
+        "global_x_ticks": [0,1500]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 14,
+        "y_label_fontsize": 14,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "palette": "muted",
+        "patch_alpha": 0.5
+    },
+    "processing":
+    {
+        "envelope_n": 2000
+    },
+    "annotations":
+    [
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 50,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 300,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 400,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 900,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 1000,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Aortic\n resistance (%):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "100",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "600",
+            "x_coord": 650,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "100",
+            "x_coord": 1250,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 4,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 4,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 4,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 4,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 4,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 4,
+            "type": "text",
+            "label": "Mitral\n regurgitant volume (ml):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 4,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 4,
+            "type": "text",
+            "label": "60",
+            "x_coord": 650,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 4,
+            "type": "text",
+            "label": "0",
+            "x_coord": 1250,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 8,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 8,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 8,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 8,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 8,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 8,
+            "type": "text",
+            "label": "Aortic\n regurgitant volume (ml):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 8,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 8,
+            "type": "text",
+            "label": "40",
+            "x_coord": 650,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 8,
+            "type": "text",
+            "label": "0",
+            "x_coord": 1250,
+            "y_rel_coord": 1.25
+        }
+
+    ],
+    "panels":
+    [
+        
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Ventricular\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle_AS_100_rev",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness_AS_100_rev",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label":"Ventricular\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle_MR_0.002_rev",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness_MR_0.002_rev",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label":"Ventricular\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle_AR_0.001_rev",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness_AR_0.001_rev",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+                ]
+            }
+        }
+    ]
+}

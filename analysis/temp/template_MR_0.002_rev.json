@@ -1,0 +1,737 @@
+{
+    "layout":
+    {
+        "fig_width": 16,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 1.3,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)",
+        "global_x_ticks": [0,1500]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 14,
+        "y_label_fontsize": 14,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "palette": "muted",
+        "patch_alpha": 0.5
+    },
+    "processing":
+    {
+        "envelope_n": 2000
+    },
+    "annotations":
+    [
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 50,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 300,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 400,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 900,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 1000,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Mitral\n regurgitant volume (ml):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "60",
+            "x_coord": 650,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "0",
+            "x_coord": 1250,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "Mitral\n regurgitant volume (ml):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "60",
+            "x_coord": 650,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "0",
+            "x_coord": 1250,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "Mitral\n regurgitant volume (ml):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "60",
+            "x_coord": 650,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "0",
+            "x_coord": 1250,
+            "y_rel_coord": 1.25
+        } 
+    ],
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Myofilament\n[$\\mathregular{Ca^{2+}}$]\n($\\mathregular{\\mu}$M)",
+                "series":
+                [
+                    {
+                        "field": "Ca_cytosol",
+                        "scaling_factor": 1e6,
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Half-sarcomere\nlength\n(nm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "hs_length",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Half-sarcomere\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "series":
+                [
+                    {
+                        "field": "cpt_myofil_stress",
+                        "field_label": "Total",
+                        "scaling_factor": 1e-3,
+                        "style": "envelope"
+
+                    },
+                    {
+                        "field": "cpt_cb_stress",
+                        "field_label": "Cross-bridge",
+                        "scaling_factor": 1e-3,
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "field_label": "Passive",
+                        "scaling_factor": 1e-3,
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Thin\nfilament",
+                "series":
+                [
+                    {
+                        "field": "n_off",
+                        "field_label": "N$\\mathregular{_{on}}$",
+                        "style": "envelope"
+
+                    },
+                    {
+                        "field": "n_on",
+                        "field_label": "N$\\mathregular{_{off}}$",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Thick\nfilament",
+                "series":
+                [
+                    {
+                        "field": "M_SRX",
+                        "field_label": "M$\\mathregular{_{SRX}}$",
+                        "style": "envelope"
+
+                    },
+                    {
+                        "field": "M_DRX",
+                        "field_label": "M$\\mathregular{_{DRX}}$",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "M_FG",
+                        "field_label":  "M$\\mathregular{_{FG}}$",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Venous\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "volume_veins",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Venous\npressure\n(mm Hg)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "pressure_veins",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Ventricular\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Arterial\npressure\n(mm Hg)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "pressure_arteries",
+                        "field_label": "P$\\mathregular{_{arteries}}$",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "baro_b_setpoint",
+                        "field_label": "P$\\mathregular{_{set}}$",
+                        "field_color": "red"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Heart\nrate\n(BPM)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "heart_rate"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "k$\\mathregular{_{act}}$\n(M $\\mathregular{s^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "k_act"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "k$\\mathregular{_{SERCA}}$\n(M $\\mathregular{s^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "k_serca"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "k$\\mathregular{_1}$\n($\\mathregular{s^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "k_1"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "k$\\mathregular{_3}$\n($\\mathregular{s^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "k_3"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "k$\\mathregular{_{on}}$\n($\\mathregular{\\mu}$$\\mathregular{M^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "k_on",
+                        "scaling_factor": 1e-8
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "R$\\mathregular{_{arteriolar}}$\n(mm Hg $\\mathregular{L^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "arterioles_resistance"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "C$\\mathregular{_{veins}}$\n([mm Hg]$\\mathregular{^{-1}}$ L)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "veins_compliance"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label":"Growth\nmodule\nactivation",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "growth_active"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label":"Mitral\nregurgitant\nvolume\n(ml)",
+                "scaling_type": "close_fit",
+                "ticks": [0,68],
+                "series":
+                [
+                    {
+                        "field": "mitral_reg_volume_max",
+                        "scaling_factor": 1e3
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ATPase\nto\nmyofibrils\n(kJ $\\mathregular{[m^{3} S]^{-1}}$)",
+                "series":
+                [
+                    {
+                        "field": "ATPase_to_myo",
+                        "field_label": "S$\\mathregular{_{con}}$",
+                        "style": "envelope",
+                        "scaling_factor": 1e-3
+                    },
+                    {
+                        "field": "gr_concentric_set",
+                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_color": "red",
+                        "scaling_factor": 1e-3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Ventricular\nwall\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Half-sarcomere\npassive\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "ticks": [-0.05,2.5],  
+                "series":
+                [
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "field_label": "S$\\mathregular{_{ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "gr_eccentric_set",
+                        "field_label": "S$\\mathregular{_{set}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color": "red"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Number\nof\nhalf-sarcomeres\naround\ncircumference\n(thousands)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "n_hs",
+                        "scaling_factor": 1e-3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Stroke\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "stroke_volume",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Stroke\nwork\n(J)",
+                "series":
+                [
+                    {
+                        "field": "stroke_work"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Ejection\nfraction\n(%)",
+                "series":
+                [
+                    {
+                        "field": "ejection_fraction"
+                    }
+                ]
+            }
+        }
+    ]
+}

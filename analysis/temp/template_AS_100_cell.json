@@ -1,0 +1,218 @@
+{
+    "layout":
+    {
+        "fig_width": 6,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 1.3,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)",
+        "global_x_ticks": [0,800]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 12,
+        "y_label_fontsize": 12,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "palette": "muted",
+        "patch_alpha": 0.5
+    },
+    "processing":
+    {
+        "envelope_n": 2000
+    },
+    "annotations":
+    [
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 50,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 300,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 400,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 400,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Aortic resistance (%):",
+            "x_coord": 425,
+            "y_rel_coord": 1.6
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "100",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "600",
+            "x_coord": 600,
+            "y_rel_coord": 1.25
+        }
+    ],
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Half-sarcomere\nlength\n(nm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "hs_length",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Thin\nfilament",
+                "series":
+                [
+                    {
+                        "field": "n_bound",
+                        "field_label": "N$\\mathregular{_{bound}}$",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "n_overlap",
+                        "field_label": "N$\\mathregular{_{overlap}}$",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Thick\nfilament",
+                "series":
+                [
+                    {
+                        "field": "M_SRX",
+                        "field_label": "M$\\mathregular{_{SRX}}$",
+                        "style": "envelope"
+
+                    },
+                    {
+                        "field": "M_DRX",
+                        "field_label": "M$\\mathregular{_{DRX}}$",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "M_FG",
+                        "field_label":  "M$\\mathregular{_{FG}}$",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Detachment\nflux, $\\mathregular{J_{4}}$\n($\\mathregular{s^{-1}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "J_4",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "ATPase\nto\nmyofibrils\n(kJ $\\mathregular{[m^{3} S]^{-1}}$)",
+                "series":
+                [
+                    {
+                        "field": "ATPase_to_myo",
+                        "field_label": "S$\\mathregular{_{con}}$",
+                        "style": "envelope",
+                        "scaling_factor": 1e-3
+                    },
+                    {
+                        "field": "gr_concentric_set",
+                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_color": "red",
+                        "scaling_factor": 1e-3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\nwall\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume"
+                    }
+                ]
+            }
+        }
+    ]
+}

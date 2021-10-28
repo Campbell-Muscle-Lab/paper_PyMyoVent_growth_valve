@@ -1,0 +1,302 @@
+{
+    "layout":
+    {
+        "fig_width": 14,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 3,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "subject_type",
+        "label": "Subjects",
+        "order": ["control", "patients"]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 14,
+        "y_label_fontsize": 14,
+        "tick_fontsize": 14,
+        "legend_fontsize": 12,
+        "y_label_pad": 40,
+        "x_label_pad":20,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "color_theme_category": "Bold_7",
+        "patch_alpha": 0.5,
+        "data_linewidth": 1,
+        "max_rows_per_legend":6
+    },
+    "strip_formatting":
+    {
+        "jitter": false,
+        "dodge":false
+    },
+    "annotations":
+    [
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Aortic Stenosis",
+            "x_coord": 0.5,
+            "y_rel_coord": 1.2,
+            "label_fontsize": 16
+        },
+        {
+            "panel": 3,
+            "type": "text",
+            "label": "Mitral Regurgitation",
+            "x_coord": 0.5,
+            "y_rel_coord": 1.2,
+            "label_fontsize": 16
+        },
+        {
+            "panel": 6,
+            "type": "text",
+            "label": "Aortic Regurgitation",
+            "x_coord": 0.5,
+            "y_rel_coord": 1.2,
+            "label_fontsize": 16
+        }
+
+    ],
+ 
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "ED LV\nvolume\nindexed\n(ml $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":0,
+                        "field": "LVEDVi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":3,
+                        "field": "LVEDVi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "ES LV\nvolume\nindexed\n(ml $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":0,
+                        "field": "LVESVi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":3,
+                        "field": "LVESVi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "LV\nmass\nindexed\n(g $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":0,
+                        "field": "LVMi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":3,
+                        "field": "LVMi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "ED LV\nvolume\nindexed\n(ml $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":1,
+                        "field": "LVEDVi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":4,
+                        "field": "LVEDVi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "ES LV\nvolume\nindexed\n(ml $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":1,
+                        "field": "LVESVi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":4,
+                        "field": "LVESVi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "LV\nmass\nindexed\n(g $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":1,
+                        "field": "LVMi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":4,
+                        "field": "LVMi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ED LV\nvolume\nindexed\n(ml $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":2,
+                        "field": "LVEDVi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":5,
+                        "field": "LVEDVi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ES LV\nvolume\nindexed\n(ml $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":2,
+                        "field": "LVESVi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":5,
+                        "field": "LVESVi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "LV\nmass\nindexed\n(g $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "data_index":2,
+                        "field": "LVMi",
+                        "style": "strip",
+                        "field_palette": "binary"
+                    },
+                    {
+                        "data_index":5,
+                        "field": "LVMi",
+                        "style": "strip",
+                        "hue": "overloading_type",
+                        "field_palette": "Bold_7",
+                        "marker_size": 17,
+                        "marker": "*"
+                    }
+                ]
+            }
+        }
+        
+    ]
+}
