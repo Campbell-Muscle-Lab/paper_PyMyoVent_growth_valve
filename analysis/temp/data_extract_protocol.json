@@ -1,0 +1,141 @@
+{
+    "data_points":
+    [
+        {
+            "point":1,
+            "condition" :
+            {
+                "name": "time",
+                "value": 290
+            },
+            "point_label": "control",
+            "variables":
+            [
+                {
+                    "name":"ED_volume_ventricle_indexed",
+                    "out_name": "LVEDVi"
+                },
+                {
+                    "name":"ES_volume_ventricle_indexed",
+                    "out_name": "LVESVi"
+                },
+                {
+                    "name":"ES_ventricle_pressure",
+                    "out_name": "ESP_vent"
+                },
+                {
+                    "name":"ventricle_wall_mass_indexed",
+                    "out_name": "LVMi"
+                },
+                {
+                    "name":"stroke_volume_indexed",
+                    "out_name": "SVi"
+                },
+                {
+                    "name":"cardiac_output_indexed",
+                    "out_name": "COi"
+                },
+                {
+                    "name":"ejection_fraction",
+                    "out_name": "EF"
+                },
+                {
+                    "name":"stroke_work",
+                    "out_name": "SW"
+                },
+                {
+                    "name":"ES_arterial_pressure",
+                    "out_name":"ESap"
+                },
+                {
+                    "name":"ED_arterial_pressure",
+                    "out_name":"EDap"
+                },
+                {
+                    "name":"ventricle_wall_volume",
+                    "out_name":"Vol_wall"
+                },
+                {
+                    "name":"n_hs",
+                    "out_name":"nhs"
+                },
+                {
+                    "name":"ES_ventricle_wall_thickness",
+                    "out_name":"ES_tw"
+                },
+                {
+                    "name":"ED_ventricle_wall_thickness",
+                    "out_name":"ED_tw"
+                }
+            ]
+        },
+        {
+            "point":2,
+            "condition" :
+            {
+                "name": "time",
+                "value": 790
+            },
+            "point_label": "patients",
+            "variables":
+            [
+              {
+                  "name":"ED_volume_ventricle_indexed",
+                  "out_name": "LVEDVi"
+              },
+              {
+                  "name":"ES_volume_ventricle_indexed",
+                  "out_name": "LVESVi"
+              },
+              {
+                "name":"ES_ventricle_pressure",
+                "out_name": "ESP_vent"
+              },
+              {
+                  "name":"ventricle_wall_mass_indexed",
+                  "out_name": "LVMi"
+              },
+              {
+                  "name":"stroke_volume_indexed",
+                  "out_name": "SVi"
+              },
+              {
+                  "name":"cardiac_output_indexed",
+                  "out_name": "COi"
+              },
+              {
+                  "name":"ejection_fraction",
+                  "out_name": "EF"
+              },
+              {
+                "name":"stroke_work",
+                "out_name": "SW"
+              },
+              {
+                  "name":"ES_arterial_pressure",
+                  "out_name":"ESap"
+              },
+              {
+                  "name":"ED_arterial_pressure",
+                  "out_name":"EDap"
+              },
+              {
+                  "name":"ventricle_wall_volume",
+                  "out_name":"Vol_wall"
+              },
+              {
+                  "name":"n_hs",
+                  "out_name":"nhs"
+              },
+              {
+                  "name":"ES_ventricle_wall_thickness",
+                  "out_name":"ES_tw"
+              },
+              {
+                  "name":"ED_ventricle_wall_thickness",
+                  "out_name":"ED_tw"
+              }
+            ]
+        }
+    ]
+}
