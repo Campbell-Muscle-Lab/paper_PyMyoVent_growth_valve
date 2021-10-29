@@ -53,5 +53,15 @@ Let's start ....
 
 ## Step3: Generating figures using simulated raw data from step 2.
 
+Once you have all simulated results in the `simulations` folder. 
+1. On your first terminal prompt window that you used for step 1, navigate to `analysis` folder by following command:
+`$cd ../analysis`.
+
+2. Run `generate_figs.py` script with the following argument input:
+`$python generate_figs.py all_figures`
+![all_figures](snapshots/all_figs.png)
+
+- It takes several minutes to read raw data, do some processing on them, and finally generate all figures. 
+- Figures will be stored in the `figures` folder in the main root of the repository. 
 
 
