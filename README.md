@@ -47,6 +47,7 @@ Let's start ....
 
 3. Now run PyMyovent code and and give the absolute path to `batch.json` file as an argument to the code:
 `$python PyMyoVent.py <absolute_path_to_simulations_folder>/batch.json`
+
 ![run_pymyovent](snapshots/run_pymyovent.png)
 - This would take several hours to run all simulations on a personal computer. 
 
