@@ -37,5 +37,6 @@ Let's start ....
     - On your terminal prompt, while you are in the `simulations` folder run the following command: 
         - mac: `$ pwd` 
         - windows: `$cd`
-    - In a second, the absolute path to the `simulations` file would be shown on your terminal prompt:
+    - In a second, the absolute path (highlighted) to the `simulations` file would be shown on your terminal prompt:
     ![abs_path](abs_path.png)
+    - Open an
