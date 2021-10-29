@@ -9,7 +9,7 @@ In general, the whole proccess can be divided into three main steps:
 | ------ | ------- |
 | 1 | Generating a batch file of required input files for PyMyoVent |
 | 2 | Running PyMyoVent using generated input files in step 1. |
-| 3 | Generate figures using simulated raw data from step 2. |  
+| 3 | Generating figures using simulated raw data from step 2. |  
 
 Let's start ....
 
@@ -40,10 +40,17 @@ Let's start ....
     - In a second, the absolute path (highlighted) to the `simulations` file would be shown on your terminal prompt:
     ![abs_path](snapshots/abs_path.png)
     - Copy the absolute path.
-    - Open another terminal prompt and navigate to PyMyoVent/Python_code folder on your local computer. 
-    `$cd <path_to_PyMyoVent>/Python_code`.
-    - Note: If you don't have PyMyoVent repository on your computer check [this](https://campbell-muscle-lab.github.io/PyMyoVent/pages/installation/installation.html) to see how to clone it.
-    - Now run PyMyovent code and and give the absolute path to `batch.json` file as an argument to the code:
-    `$python PyMyoVent.py <absolute_path_to_simulations_folder>/batch.json`
-    ![run_pymyovent](snapshots/run_pymyovent.png)
+2. Open another terminal prompt and navigate to PyMyoVent/Python_code folder on your local computer. 
+`$cd <path_to_PyMyoVent>/Python_code`.
+
+- Note: If you don't have PyMyoVent repository on your computer check [this](https://campbell-muscle-lab.github.io/PyMyoVent/pages/installation/installation.html) to see how to clone it.
+
+3. Now run PyMyovent code and and give the absolute path to `batch.json` file as an argument to the code:
+`$python PyMyoVent.py <absolute_path_to_simulations_folder>/batch.json`
+![run_pymyovent](snapshots/run_pymyovent.png)
+- This would take several hours to run all simulations on a personal computer. 
+
+## Step3: Generating figures using simulated raw data from step 2.
+
+
 
