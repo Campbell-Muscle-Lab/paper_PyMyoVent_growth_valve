@@ -38,7 +38,7 @@ Let's start ....
         - mac: `$ pwd` 
         - windows: `$cd`
     - In a second, the absolute path (highlighted) to the `simulations` file would be shown on your terminal prompt:
-    ![abs_path](abs_path.png)
+    ![abs_path](snapshots/abs_path.png)
     - Open another terminal prompt and navigate to PyMyoVent/Python_code folder on your local computer. 
     `$cd <path_to_PyMyoVent>/Python_code`.
     - Note: If you don't have PyMyoVent repository on your computer check [this](https://campbell-muscle-lab.github.io/PyMyoVent/pages/installation/installation.html) to see how to clone it.
