@@ -39,7 +39,11 @@ Let's start ....
         - windows: `$cd`
     - In a second, the absolute path (highlighted) to the `simulations` file would be shown on your terminal prompt:
     ![abs_path](snapshots/abs_path.png)
+    - Copy the absolute path.
     - Open another terminal prompt and navigate to PyMyoVent/Python_code folder on your local computer. 
     `$cd <path_to_PyMyoVent>/Python_code`.
     - Note: If you don't have PyMyoVent repository on your computer check [this](https://campbell-muscle-lab.github.io/PyMyoVent/pages/installation/installation.html) to see how to clone it.
+    - Now run PyMyovent code and and give the absolute path to `batch.json` file as an argument to the code:
+    `$python PyMyoVent.py <absolute_path_to_simulations_folder>/batch.json`
+    ![run_pymyovent](snapshots/run_pymyovent.png)
 
