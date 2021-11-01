@@ -8,7 +8,7 @@
                 "name": "time",
                 "value": 290
             },
-            "point_label": "control",
+            "point_label": "CS",
             "variables":
             [
                 {
@@ -76,7 +76,7 @@
                 "name": "time",
                 "value": 790
             },
-            "point_label": "patients",
+            "point_label": "PS",
             "variables":
             [
               {
