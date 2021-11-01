@@ -13,7 +13,7 @@ def display_pv_loops(data_str = [], time_frames = [], output_str = ''):
                 time_frames = time_frames,
                 pressure_var_name = 'pressure_ventricle',
                 volume_var_name = 'volume_ventricle',
-                template_data = {'formatting':{'palette':'Set2'},'layout':{'fig_width':8}},
+                template_data = {'formatting':{'palette':'tab10'},'layout':{'fig_width':8}},
                 time_var_name = 'time',
                 legend_labels = ['Baseline','Aortic Stenosis','Mitral Regurgitation','Aortic Regurgitation'],
                 output_image_file_string = output_str,
@@ -61,6 +61,12 @@ def generate_data_lists():
 
     data_dict['clinical_control_data'] = \
         ['clinical_data/control_clinical.xlsx']
+
+    data_dict['con_set_point'] = \
+        '../simulations/simulation_AS_100/sim_output/data_AS_100.csv'
+
+    data_dict['ecc_set_point'] = \
+        '../simulations/simulation_MR_0.002/sim_output/data_MR_0.002.csv'
 
     return data_dict
 if __name__ == '__main__':
@@ -177,7 +183,7 @@ if __name__ == '__main__':
 
                 temp_extracted_data['valvular_disorder'] = valvular_disorder
                 temp_extracted_data['overloading_type'] = overloading_type
-                temp_extracted_data['overloading_type'].loc[temp_extracted_data['subject_type']=='control'] = 'baseline'
+                temp_extracted_data['overloading_type'].loc[temp_extracted_data['subject_type']=='CS'] = 'baseline'
                 print(f'data points are extracted from {d}.')
                 sim_data_points = sim_data_points.append(temp_extracted_data,ignore_index = True)
             
@@ -236,7 +242,7 @@ if __name__ == '__main__':
             for var in var_to_extract: 
                 #control_data[var] = pd.Series()
                 if var =='subject_type':
-                    control_data[var] = 'control'
+                    control_data[var] = 'CD'
                 else:
                     control_data[var] = raw_control_data[var]
 
@@ -253,7 +259,7 @@ if __name__ == '__main__':
                 for var in var_to_extract:
                     #clinical_data[var]= pd.Series() 
                     if var =='subject_type':
-                        clinical_data[var] = 'patients'
+                        clinical_data[var] = 'PD'
                     else:
                         clinical_data[var] = raw_patient_data[var]
                 
@@ -311,5 +317,32 @@ if __name__ == '__main__':
                 mpl(pandas_data = pandas_data,
                     template_file_string = template_file_string,
                     output_image_file_string = output_str)
+        
+        if sys.argv[1] == 'con_set_point' or sys.argv[1] == 'all_figures':
 
-                
+            pandas_data = pd.read_csv(data_dict['con_set_point'])
+            pandas_data['mean_ATPase_to_myo'] = \
+                pandas_data['ATPase_to_myo'].rolling(window = 40000).mean()
+            pandas_data['mean_ATPase_to_myo'].loc[pandas_data['mean_ATPase_to_myo'].isna()] = \
+                pandas_data['mean_ATPase_to_myo'].loc[pandas_data['mean_ATPase_to_myo'].notna()].to_numpy()[0]
+            print(pandas_data['mean_ATPase_to_myo'].loc[pandas_data['mean_ATPase_to_myo'].notna()].to_numpy()[0])
+            template_file_string = 'temp/template_con_set_point.json'
+            output_str = '../figures/con_set_point.jpeg'
+
+            mpl(pandas_data = pandas_data,
+                template_file_string = template_file_string,
+                output_image_file_string = output_str)
+
+        if sys.argv[1] == 'ecc_set_point' or sys.argv[1] == 'all_figures':
+
+            pandas_data = pd.read_csv(data_dict['ecc_set_point'])
+            pandas_data['mean_cpt_int_pas_stress'] = \
+                pandas_data['cpt_int_pas_stress'].rolling(window = 10000).mean()
+            pandas_data['mean_cpt_int_pas_stress'].loc[pandas_data['mean_cpt_int_pas_stress'].isna()] = \
+                pandas_data['mean_cpt_int_pas_stress'].loc[pandas_data['mean_cpt_int_pas_stress'].notna()].to_numpy()[0]
+            template_file_string = 'temp/template_ecc_set_point.json'
+            output_str = '../figures/ecc_set_point.jpeg'
+
+            mpl(pandas_data = pandas_data,
+                template_file_string = template_file_string,
+                output_image_file_string = output_str)
