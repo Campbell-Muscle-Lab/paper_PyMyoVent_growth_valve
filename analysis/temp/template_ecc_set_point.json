@@ -1,0 +1,152 @@
+{
+    "layout":
+    {
+        "fig_width": 6,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 1.5,
+        "grid_wspace": -0.5,
+        "grid_hspace": 0.1
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)",
+        "global_x_ticks": [0,800]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 10,
+        "y_label_fontsize": 10,
+        "tick_fontsize": 10,
+        "legend_fontsize": 8,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "palette": "muted",
+        "patch_alpha": 0.5 
+    },
+    "processing":
+    {
+        "envelope_n": 2000
+    },
+    "annotations":
+    [
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 50,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 300,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 400,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 400,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Mitral regurgitant volume (ml):",
+            "x_coord": 425,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.25
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "60",
+            "x_coord": 600,
+            "y_rel_coord": 1.25
+        }
+    ],
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Half-sarcomere\npassive\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "ticks": [-0.05,2.5],  
+                "series":
+                [
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "field_label": "S$\\mathregular{_{ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "gr_eccentric_set",
+                        "field_label": "S$\\mathregular{_{set}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color": "red"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Mean\nHalf-sarcomere\npassive\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
+                "ticks": [-0.05,2.5],  
+                "series":
+                [
+                    {
+                        "field": "mean_cpt_int_pas_stress",
+                        "field_label": "Mean S$\\mathregular{_{ecc}}$",
+                        "scaling_factor": 1e-3
+                    },
+                    {
+                        "field": "gr_eccentric_set",
+                        "field_label": "S$\\mathregular{_{set}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color": "red"
+                    }
+                ]
+            }
+        }
+    ]
+}
