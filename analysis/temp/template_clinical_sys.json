@@ -1,7 +1,7 @@
 {
     "layout":
     {
-        "fig_width": 14,
+        "fig_width": 12,
         "top_margin": 0,
         "left_margin": 0,
         "right_margin": 0,
@@ -15,14 +15,14 @@
     },
     "formatting":
     {
-        "x_label_fontsize": 14,
-        "y_label_fontsize": 14,
-        "tick_fontsize": 14,
-        "legend_fontsize": 12,
+        "x_label_fontsize": 12,
+        "y_label_fontsize": 12,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
         "y_label_pad": 40,
         "x_label_pad":20,
         "legend_bbox_to_anchor": [1.0, 1.05],
-        "color_theme_category": "Bold_7",
+        "color_theme_category": "Set2",
         "patch_alpha": 0.5,
         "data_linewidth": 1,
         "max_rows_per_legend":6
@@ -43,7 +43,7 @@
             "label_fontsize": 16
         },
         {
-            "panel": 3,
+            "panel": 2,
             "type": "text",
             "label": "Mitral Regurgitation",
             "x_coord": 0.5,
@@ -51,7 +51,7 @@
             "label_fontsize": 16
         },
         {
-            "panel": 6,
+            "panel": 4,
             "type": "text",
             "label": "Aortic Regurgitation",
             "x_coord": 0.5,
@@ -61,29 +61,29 @@
 
     ],
  
-    "panels": 
+    "panels":
     [
         {
             "column": 1,
             "y_info":
             {
-                "label": "LV\nend-diastolic\nvolume index\n(ml $\\mathregular{m^{-2}}$)",
+                "label": "LV stroke\nvolume\nindex\n(ml $\\mathregular{m^{-2}}$)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "data_index":0,
-                        "field": "LVEDVi",
+                        "field": "SVi",
                         "style": "strip",
                         "field_palette": "binary"
                     },
                     {
                         "data_index":3,
-                        "field": "LVEDVi",
+                        "field": "SVi",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 17,
+                        "marker_size": 15,
                         "marker": "*"
                     }
                 ]
@@ -93,49 +93,23 @@
             "column": 1,
             "y_info":
             {
-                "label": "LV\nend-systolic\nvolume index\n(ml $\\mathregular{m^{-2}}$)",
+                "label": "Ejection\nfraction (%)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "data_index":0,
-                        "field": "LVESVi",
+                        "field": "EF",
                         "style": "strip",
                         "field_palette": "binary"
                     },
                     {
                         "data_index":3,
-                        "field": "LVESVi",
+                        "field": "EF",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 17,
-                        "marker": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 1,
-            "y_info":
-            {
-                "label": "LV\nmass\nindex\n(g $\\mathregular{m^{-2}}$)",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "data_index":0,
-                        "field": "LVMi",
-                        "style": "strip",
-                        "field_palette": "binary"
-                    },
-                    {
-                        "data_index":3,
-                        "field": "LVMi",
-                        "style": "strip",
-                        "hue": "overloading_type",
-                        "field_palette": "Bold_7",
-                        "marker_size": 17,
+                        "marker_size": 15,
                         "marker": "*"
                     }
                 ]
@@ -145,23 +119,23 @@
             "column": 2,
             "y_info":
             {
-                "label": "LV\nend-diastolic\nvolume index\n(ml $\\mathregular{m^{-2}}$)",
+                "label": "LV stroke\nvolume\nindex\n(ml $\\mathregular{m^{-2}}$)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "data_index":1,
-                        "field": "LVEDVi",
+                        "field": "SVi",
                         "style": "strip",
                         "field_palette": "binary"
                     },
                     {
                         "data_index":4,
-                        "field": "LVEDVi",
+                        "field": "SVi",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 17,
+                        "marker_size": 15,
                         "marker": "*"
                     }
                 ]
@@ -171,49 +145,50 @@
             "column": 2,
             "y_info":
             {
-                "label": "LV\nend-systolic\nvolume index\n(ml $\\mathregular{m^{-2}}$)",
+                "label": "Ejection\nfraction (%)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "data_index":1,
-                        "field": "LVESVi",
+                        "field": "EF",
                         "style": "strip",
                         "field_palette": "binary"
                     },
                     {
                         "data_index":4,
-                        "field": "LVESVi",
+                        "field": "EF",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 17,
+                        "marker_size": 15,
                         "marker": "*"
                     }
                 ]
             }
         },
+        
         {
-            "column": 2,
+            "column": 3,
             "y_info":
             {
-                "label": "LV\nmass\nindex\n(g $\\mathregular{m^{-2}}$)",
+                "label": "LV stroke\nvolume\nindex\n(ml $\\mathregular{m^{-2}}$)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
-                        "data_index":1,
-                        "field": "LVMi",
+                        "data_index":2,
+                        "field": "SVi",
                         "style": "strip",
                         "field_palette": "binary"
                     },
                     {
-                        "data_index":4,
-                        "field": "LVMi",
+                        "data_index":5,
+                        "field": "SVi",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 17,
+                        "marker_size": 15,
                         "marker": "*"
                     }
                 ]
@@ -223,75 +198,23 @@
             "column": 3,
             "y_info":
             {
-                "label": "LV\nend-diastolic\nvolume index\n(ml $\\mathregular{m^{-2}}$)",
+                "label": "Ejection\nfraction (%)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "data_index":2,
-                        "field": "LVEDVi",
+                        "field": "EF",
                         "style": "strip",
                         "field_palette": "binary"
                     },
                     {
                         "data_index":5,
-                        "field": "LVEDVi",
+                        "field": "EF",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 17,
-                        "marker": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "LV\nend-systolic\nvolume index\n(ml $\\mathregular{m^{-2}}$))",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "data_index":2,
-                        "field": "LVESVi",
-                        "style": "strip",
-                        "field_palette": "binary"
-                    },
-                    {
-                        "data_index":5,
-                        "field": "LVESVi",
-                        "style": "strip",
-                        "hue": "overloading_type",
-                        "field_palette": "Bold_7",
-                        "marker_size": 17,
-                        "marker": "*"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "LV\nmass\nindex\n(g $\\mathregular{m^{-2}}$)",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "data_index":2,
-                        "field": "LVMi",
-                        "style": "strip",
-                        "field_palette": "binary"
-                    },
-                    {
-                        "data_index":5,
-                        "field": "LVMi",
-                        "style": "strip",
-                        "hue": "overloading_type",
-                        "field_palette": "Bold_7",
-                        "marker_size": 17,
+                        "marker_size": 15,
                         "marker": "*"
                     }
                 ]
