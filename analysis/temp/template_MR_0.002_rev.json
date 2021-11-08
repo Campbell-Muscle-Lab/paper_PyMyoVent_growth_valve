@@ -119,21 +119,21 @@
             "type": "text",
             "label": "0",
             "x_coord": 175,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 0,
             "type": "text",
             "label": "60",
             "x_coord": 650,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 0,
             "type": "text",
             "label": "0",
             "x_coord": 1250,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 9,
@@ -189,21 +189,21 @@
             "type": "text",
             "label": "0",
             "x_coord": 175,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 9,
             "type": "text",
             "label": "60",
             "x_coord": 650,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 9,
             "type": "text",
             "label": "0",
             "x_coord": 1250,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 18,
@@ -259,21 +259,21 @@
             "type": "text",
             "label": "0",
             "x_coord": 175,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 18,
             "type": "text",
             "label": "60",
             "x_coord": 650,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 18,
             "type": "text",
             "label": "0",
             "x_coord": 1250,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         } 
     ],
     "panels":
@@ -312,24 +312,25 @@
             "column": 1,
             "y_info":
             {
-                "label":"Half-sarcomere\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "label":"Wall stress\n(kN $\\mathregular{m^{-2}}$)",
+                "scaling_type": "close_fit",
                 "series":
                 [
                     {
-                        "field": "cpt_myofil_stress",
+                        "field": "hs_stress",
                         "field_label": "Total",
                         "scaling_factor": 1e-3,
                         "style": "envelope"
 
                     },
                     {
-                        "field": "cpt_cb_stress",
-                        "field_label": "Cross-bridge",
+                        "field": "cb_stress",
+                        "field_label": "Active",
                         "scaling_factor": 1e-3,
                         "style": "envelope"
                     },
                     {
-                        "field": "cpt_int_pas_stress",
+                        "field": "int_pas_stress",
                         "field_label": "Passive",
                         "scaling_factor": 1e-3,
                         "style": "envelope"
@@ -391,12 +392,11 @@
             "column": 1,
             "y_info":
             {
-                "label":"Venous\nvolume\n(liters)",
-                "scaling_type": "close_fit",
+                "label":"Ventricular\npressure\n(mmHg)",
                 "series":
                 [
                     {
-                        "field": "volume_veins",
+                        "field": "pressure_ventricle",
                         "style": "envelope"
                     }
 
@@ -407,8 +407,7 @@
             "column": 1,
             "y_info":
             {
-                "label":"Venous\npressure\n(mm Hg)",
-                "scaling_type": "close_fit",
+                "label":"Venous\npressure\n(mmHg)",
                 "series":
                 [
                     {
@@ -423,8 +422,7 @@
             "column": 1,
             "y_info":
             {
-                "label":"Ventricular\nvolume\n(liters)",
-                "scaling_type": "close_fit",
+                "label":"Ventricular\ncavity volume\n(liters)",
                 "series":
                 [
                     {
@@ -439,7 +437,7 @@
             "column": 1,
             "y_info":
             {
-                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "label":"Ventricular\nwall\nthickness\n(mm)",
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -456,8 +454,7 @@
             "column": 2,
             "y_info":
             {
-                "label": "Arterial\npressure\n(mm Hg)",
-                "scaling_type": "close_fit",
+                "label": "Arterial\npressure\n(mmHg)",
                 "series":
                 [
                     {
@@ -477,7 +474,7 @@
             "column": 2,
             "y_info":
             {
-                "label": "Heart\nrate\n(BPM)",
+                "label": "Heart\nrate\n(bpm)",
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -547,7 +544,7 @@
             "column": 2,
             "y_info":
             {
-                "label": "k$\\mathregular{_{on}}$\n($\\mathregular{\\mu}$$\\mathregular{M^{-1}}$)",
+                "label": "k$\\mathregular{_{on}}$\n($\\mathregular{\\mu}$$\\mathregular{M^{-1}}$$\\mathregular{s^{-1}}$)",
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -562,7 +559,7 @@
             "column": 2,
             "y_info":
             {
-                "label": "R$\\mathregular{_{arteriolar}}$\n(mm Hg $\\mathregular{L^{-1}}$)",
+                "label": "R$\\mathregular{_{arteriolar}}$\n(mmHg $\\mathregular{L^{-1} s}$)",
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -576,28 +573,13 @@
             "column": 2,
             "y_info":
             {
-                "label": "C$\\mathregular{_{veins}}$\n([mm Hg]$\\mathregular{^{-1}}$ L)",
+                "label": "C$\\mathregular{_{veins}}$\n([mmHg]$\\mathregular{^{-1}}$ L)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "field": "veins_compliance"
                     }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label":"Growth\nmodule\nactivation",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "field": "growth_active"
-                    }
-
                 ]
             }
         },
@@ -622,7 +604,7 @@
             "column": 3,
             "y_info":
             {
-                "label": "ATPase\nto\nmyofibrils\n(kJ $\\mathregular{[m^{3} S]^{-1}}$)",
+                "label": "ATPase to\n myofibrillar\nvolume\n(kJ $\\mathregular{[m^{3} s]^{-1}}$)",
                 "series":
                 [
                     {
@@ -644,8 +626,37 @@
             "column": 3,
             "y_info":
             {
-                "label": "Ventricular\nwall\nvolume\n(liters)",
-                "scaling_type": "close_fit",
+                "label": "G$\\mathregular{_{a,con}}$",
+                "ticks": [0,1], 
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_g",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "G$\\mathregular{_{c,con}}$\n($\\mathregular{\\times 10^{-3}}$)",
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_c",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Ventricular\nwall volume\n(liters)",
                 "series":
                 [
                     {
@@ -658,7 +669,7 @@
             "column": 3,
             "y_info":
             {
-                "label": "Half-sarcomere\npassive\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "label": "Intracellular\npassive stress\n(kN $\\mathregular{m^{-2}}$)",
                 "scaling_type": "close_fit",
                 "ticks": [-0.05,2.5],  
                 "series":
@@ -682,53 +693,43 @@
             "column": 3,
             "y_info":
             {
-                "label": "Number\nof\nhalf-sarcomeres\naround\ncircumference\n(thousands)",
+                "label": "G$\\mathregular{_{a,ecc}}$",
+                "ticks": [0,1], 
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_g",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "G$\\mathregular{_{c,ecc}}$\n($\\mathregular{\\times 10^{-3}}$)",
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_c",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Number\nof\nhalf-sarcomeres\n(thousands)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "field": "n_hs",
                         "scaling_factor": 1e-3
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Stroke\nvolume\n(liters)",
-                "series":
-                [
-                    {
-                        "field": "stroke_volume",
-                        "style": "line"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Stroke\nwork\n(J)",
-                "series":
-                [
-                    {
-                        "field": "stroke_work"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Ejection\nfraction\n(%)",
-                "series":
-                [
-                    {
-                        "field": "ejection_fraction"
                     }
                 ]
             }
