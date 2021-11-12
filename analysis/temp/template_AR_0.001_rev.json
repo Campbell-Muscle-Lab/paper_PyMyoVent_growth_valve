@@ -615,7 +615,7 @@
                     },
                     {
                         "field": "gr_concentric_set",
-                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_label": "S$\\mathregular{_{con,set}}$",
                         "field_color": "red",
                         "scaling_factor": 1e-3
                     }
@@ -682,7 +682,7 @@
                     },
                     {
                         "field": "gr_eccentric_set",
-                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_label": "S$\\mathregular{_{ecc,set}}$",
                         "scaling_factor": 1e-3,
                         "field_color": "red"
                     }
