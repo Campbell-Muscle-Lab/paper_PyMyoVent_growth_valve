@@ -16,10 +16,10 @@
     },
     "formatting":
     {
-        "x_label_fontsize": 10,
-        "y_label_fontsize": 10,
-        "tick_fontsize": 10,
-        "legend_fontsize": 8,
+        "x_label_fontsize": 12,
+        "y_label_fontsize": 12,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
         "y_label_pad": 50,
         "legend_bbox_to_anchor": [1.0, 1.05],
         "palette": "muted",
@@ -105,6 +105,20 @@
             "column": 1,
             "y_info":
             {
+                "label": "Heart\nrate\n(bpm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "heart_rate"
+                    }
+                ]
+            }
+        }, 
+        {
+            "column": 1,
+            "y_info":
+            {
                 "label": "Half-sarcomere\npassive\nstress\n(kN $\\mathregular{m^{-2}}$)",
                 "scaling_type": "close_fit",
                 "ticks": [-0.05,2.5],  
@@ -117,8 +131,13 @@
                         "style": "envelope"
                     },
                     {
+                        "field": "mean_cpt_int_pas_stress",
+                        "field_label": "Mean S$\\mathregular{_{ecc}}$",
+                        "scaling_factor": 1e-3
+                    },
+                    {
                         "field": "gr_eccentric_set",
-                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_label": "S$\\mathregular{_{ecc,set}}$",
                         "scaling_factor": 1e-3,
                         "field_color": "red"
                     }
@@ -141,9 +160,54 @@
                     },
                     {
                         "field": "gr_eccentric_set",
-                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_label": "S$\\mathregular{_{ecc,set}}$",
                         "scaling_factor": 1e-3,
                         "field_color": "red"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "G$\\mathregular{_{a,ecc}}$",
+                "ticks": [0,1], 
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_g",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "G$\\mathregular{_{c,ecc}}$\n($\\mathregular{\\times 10^{-3}}$)",
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_c",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Number\nof\nhalf-sarcomeres\n(thousands)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "n_hs",
+                        "scaling_factor": 1e-3
                     }
                 ]
             }
