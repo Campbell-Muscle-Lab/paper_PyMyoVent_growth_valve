@@ -119,21 +119,91 @@
             "type": "text",
             "label": "100",
             "x_coord": 175,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 0,
             "type": "text",
             "label": "600",
             "x_coord": 650,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 0,
             "type": "text",
             "label": "100",
             "x_coord": 1250,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
+        },
+        {
+            "panel": 2,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.1,
+            "width": 250,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 2,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 2,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 2,
+            "type": "box",
+            "x_coord": 900,
+            "y_rel_coord": 1.1,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 2,
+            "type": "box",
+            "x_coord": 1000,
+            "y_rel_coord": 1.1,
+            "width": 500,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 2,
+            "type": "text",
+            "label": "Aortic\n regurgitant volume (ml):",
+            "x_coord": 750,
+            "y_rel_coord": 1.8
+        },
+        {
+            "panel": 2,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.23
+        },
+        {
+            "panel": 2,
+            "type": "text",
+            "label": "40",
+            "x_coord": 650,
+            "y_rel_coord": 1.23
+        },
+        {
+            "panel": 2,
+            "type": "text",
+            "label": "0",
+            "x_coord": 1250,
+            "y_rel_coord": 1.23
         },
         {
             "panel": 4,
@@ -189,91 +259,21 @@
             "type": "text",
             "label": "0",
             "x_coord": 175,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 4,
             "type": "text",
             "label": "60",
             "x_coord": 650,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         },
         {
             "panel": 4,
             "type": "text",
             "label": "0",
             "x_coord": 1250,
-            "y_rel_coord": 1.25
-        },
-        {
-            "panel": 8,
-            "type": "box",
-            "x_coord": 50,
-            "y_rel_coord": 1.1,
-            "width": 250,
-            "rel_height": 0.3
-        },
-        {
-            "panel": 8,
-            "type": "box",
-            "x_coord": 300,
-            "y_rel_coord": 1.1,
-            "face_color": "gray",
-            "width": 100,
-            "rel_height": 0.3
-        },
-        {
-            "panel": 8,
-            "type": "box",
-            "x_coord": 400,
-            "y_rel_coord": 1.1,
-            "width": 500,
-            "rel_height": 0.3
-        },
-        {
-            "panel": 8,
-            "type": "box",
-            "x_coord": 900,
-            "y_rel_coord": 1.1,
-            "face_color": "gray",
-            "width": 100,
-            "rel_height": 0.3
-        },
-        {
-            "panel": 8,
-            "type": "box",
-            "x_coord": 1000,
-            "y_rel_coord": 1.1,
-            "width": 500,
-            "rel_height": 0.3
-        },
-        {
-            "panel": 8,
-            "type": "text",
-            "label": "Aortic\n regurgitant volume (ml):",
-            "x_coord": 750,
-            "y_rel_coord": 1.8
-        },
-        {
-            "panel": 8,
-            "type": "text",
-            "label": "0",
-            "x_coord": 175,
-            "y_rel_coord": 1.25
-        },
-        {
-            "panel": 8,
-            "type": "text",
-            "label": "40",
-            "x_coord": 650,
-            "y_rel_coord": 1.25
-        },
-        {
-            "panel": 8,
-            "type": "text",
-            "label": "0",
-            "x_coord": 1250,
-            "y_rel_coord": 1.25
+            "y_rel_coord": 1.23
         }
 
     ],
@@ -284,7 +284,8 @@
             "column": 1,
             "y_info":
             {
-                "label":"Ventricular\nvolume\n(liters)",
+                "label":"Ventricular\ncavity volume\n(liters)",
+                "ticks": [0,0.3],
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -300,7 +301,7 @@
             "column": 1,
             "y_info":
             {
-                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "label":"Ventricular\nwall\nthickness\n(mm)",
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -313,44 +314,13 @@
                 ]
             }
         },
+        
         {
             "column": 2,
             "y_info":
             {
-                "label":"Ventricular\nvolume\n(liters)",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "field": "volume_ventricle_MR_0.002_rev",
-                        "style": "envelope"
-                    }
-
-                ]
-            }
-        },
-        {
-            "column": 2,
-            "y_info":
-            {
-                "label":"Ventricle\nwall\nthickness\n(mm)",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "field": "ventricle_wall_thickness_MR_0.002_rev",
-                        "style": "envelope",
-                        "scaling_factor": 1e3
-                    }
-
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label":"Ventricular\nvolume\n(liters)",
+                "label":"Ventricular\ncavity volume\n(liters)",
+                "ticks": [0,0.3],
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -363,10 +333,10 @@
             }
         },
         {
-            "column": 3,
+            "column": 2,
             "y_info":
             {
-                "label":"Ventricle\nwall\nthickness\n(mm)",
+                "label":"Ventricular\nwall\nthickness\n(mm)",
                 "scaling_type": "close_fit",
                 "series":
                 [
@@ -375,6 +345,40 @@
                         "style": "envelope",
                         "scaling_factor": 1e3
                     }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label":"Ventricular\ncavity volume\n(liters)",
+                "ticks": [0,0.3],
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle_MR_0.002_rev",
+                        "style": "envelope"
+                    }
+
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label":"Ventricular\nwall\nthickness\n(mm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness_MR_0.002_rev",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+
                 ]
             }
         }
