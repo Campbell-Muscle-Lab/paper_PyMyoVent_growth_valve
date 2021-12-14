@@ -6,19 +6,21 @@
         "left_margin": 0,
         "right_margin": 0,
         "panel_height": 3,
-        "grid_wspace": -0.5
+        "grid_wspace": -0.5,
+        "grid_hspace": 0.1
     },
     "x_display":{
         "global_x_field": "subject_type",
-        "label": "Subjects",
-        "order": ["CD", "CS", "PD", "PS"]
+        "label": "",
+        "order": ["Control", "Baseline (Sim)", "Patient", "Patient (Sim)"]
     },
     "formatting":
     {
         "x_label_fontsize": 12,
         "y_label_fontsize": 12,
-        "tick_fontsize": 12,
+        "tick_fontsize": 10,
         "legend_fontsize": 10,
+        "x_ticks_rotation" : 45, 
         "y_label_pad": 40,
         "x_label_pad":20,
         "legend_bbox_to_anchor": [1.0, 1.05],
@@ -38,28 +40,37 @@
             "panel": 0,
             "type": "text",
             "label": "Aortic Stenosis",
-            "x_coord": 0.5,
-            "y_rel_coord": 1.2,
+            "x_coord": 1.5,
+            "y_rel_coord": 1.5,
             "label_fontsize": 16
         },
         {
             "panel": 2,
             "type": "text",
-            "label": "Mitral Regurgitation",
-            "x_coord": 0.5,
-            "y_rel_coord": 1.2,
+            "label": "Aortic Insufficiency",
+            "x_coord": 1.5,
+            "y_rel_coord": 1.5,
             "label_fontsize": 16
         },
         {
             "panel": 4,
             "type": "text",
-            "label": "Aortic Regurgitation",
-            "x_coord": 0.5,
-            "y_rel_coord": 1.2,
+            "label": "Mitral Insufficiency",
+            "x_coord": 1.5,
+            "y_rel_coord": 1.5,
             "label_fontsize": 16
         }
 
     ],
+    "stats":
+    {
+        "test": "t-test_ind",
+        "location": "outside",
+        "box_pairs": 
+        [
+            ["Patient", "Patient (Sim)"]
+        ]
+    },
  
     "panels":
     [
@@ -68,13 +79,14 @@
             "y_info":
             {
                 "label": "LV stroke\nvolume\nindex\n(ml $\\mathregular{m^{-2}}$)",
-                "scaling_type": "close_fit",
+                "ticks": [0,100],
+                "legend_title": "$\\mathregular{\u0394R_{aorta}}:$",
                 "series":
                 [
                     {
                         "data_index":0,
                         "field": "SVi",
-                        "style": "strip",
+                        "style": "box",
                         "field_palette": "binary"
                     },
                     {
@@ -83,8 +95,8 @@
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 15,
-                        "marker": "*"
+                        "marker_size": 10,
+                        "marker": "o"
                     }
                 ]
             }
@@ -94,13 +106,14 @@
             "y_info":
             {
                 "label": "Ejection\nfraction (%)",
-                "scaling_type": "close_fit",
+                "ticks":[40,80],
+                "legend_title": "$\\mathregular{\u0394R_{aorta}}:$",
                 "series":
                 [
                     {
                         "data_index":0,
                         "field": "EF",
-                        "style": "strip",
+                        "style": "box",
                         "field_palette": "binary"
                     },
                     {
@@ -109,34 +122,35 @@
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 15,
-                        "marker": "*"
+                        "marker_size": 10,
+                        "marker": "o"
                     }
                 ]
             }
-        },
+        },        
         {
             "column": 2,
             "y_info":
             {
                 "label": "LV stroke\nvolume\nindex\n(ml $\\mathregular{m^{-2}}$)",
-                "scaling_type": "close_fit",
+                "ticks": [0,100],
+                "legend_title": "$\\mathregular{RV_{aorta}}:$",
                 "series":
                 [
                     {
-                        "data_index":1,
+                        "data_index":2,
                         "field": "SVi",
-                        "style": "strip",
+                        "style": "box",
                         "field_palette": "binary"
                     },
                     {
-                        "data_index":4,
+                        "data_index":5,
                         "field": "SVi",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 15,
-                        "marker": "*"
+                        "marker_size": 10,
+                        "marker": "o"
                     }
                 ]
             }
@@ -146,50 +160,51 @@
             "y_info":
             {
                 "label": "Ejection\nfraction (%)",
-                "scaling_type": "close_fit",
+                "ticks":[40,80],
+                "legend_title": "$\\mathregular{RV_{aorta}}:$",
                 "series":
                 [
                     {
-                        "data_index":1,
+                        "data_index":2,
                         "field": "EF",
-                        "style": "strip",
+                        "style": "box",
                         "field_palette": "binary"
                     },
                     {
-                        "data_index":4,
+                        "data_index":5,
                         "field": "EF",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 15,
-                        "marker": "*"
+                        "marker_size": 10,
+                        "marker": "o"
                     }
                 ]
             }
         },
-        
         {
             "column": 3,
             "y_info":
             {
                 "label": "LV stroke\nvolume\nindex\n(ml $\\mathregular{m^{-2}}$)",
-                "scaling_type": "close_fit",
+                "ticks": [0,100],
+                "legend_title": "$\\mathregular{RV_{mitral}}:$",
                 "series":
                 [
                     {
-                        "data_index":2,
+                        "data_index":1,
                         "field": "SVi",
-                        "style": "strip",
+                        "style": "box",
                         "field_palette": "binary"
                     },
                     {
-                        "data_index":5,
+                        "data_index":4,
                         "field": "SVi",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 15,
-                        "marker": "*"
+                        "marker_size": 10,
+                        "marker": "o"
                     }
                 ]
             }
@@ -199,23 +214,24 @@
             "y_info":
             {
                 "label": "Ejection\nfraction (%)",
-                "scaling_type": "close_fit",
+                "ticks":[40,80],
+                "legend_title": "$\\mathregular{RV_{mitral}}:$",
                 "series":
                 [
                     {
-                        "data_index":2,
+                        "data_index":1,
                         "field": "EF",
-                        "style": "strip",
+                        "style": "box",
                         "field_palette": "binary"
                     },
                     {
-                        "data_index":5,
+                        "data_index":4,
                         "field": "EF",
                         "style": "strip",
                         "hue": "overloading_type",
                         "field_palette": "Bold_7",
-                        "marker_size": 15,
-                        "marker": "*"
+                        "marker_size": 10,
+                        "marker": "o"
                     }
                 ]
             }
