@@ -1,0 +1,177 @@
+{
+    "layout":
+    {
+        "fig_width": 6,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 3.5,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "label": "Volume (liters)",
+        "global_x_ticks": [0,0.3]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 14,
+        "y_label_fontsize": 14,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [0.7, 1],
+        "palette": "muted",
+        "patch_alpha": 0.5,
+        "max_rows_per_legend":5 ,
+        "data_linewidth": 2
+    },
+    "processing":
+    {
+        "envelope_n": 2000
+    },
+    "annotations":
+    [
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Aortic stenosis",
+            "x_coord": 0.15,
+            "y_rel_coord": 1.2
+        },
+        {
+            "panel": 1,
+            "type": "text",
+            "label": "Aortic regurgitation",
+            "x_coord": 0.15,
+            "y_rel_coord": 1.2
+        },
+        {
+            "panel": 2,
+            "type": "text",
+            "label": "Mitral regurgitation",
+            "x_coord": 0.15,
+            "y_rel_coord": 1.2
+        }
+    ],
+    "panels":
+    [
+        
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Pressure\n(mmHg)",
+                "scaling_type": "close_fit",
+                "ticks": [0,220],
+                "series":
+                [
+                    {
+                        "x_field": "volume_ventricle_baseline",
+                        "y_field": "pressure_ventricle_baseline",
+                        "field_label": "Baseline",
+                        "field_color": "#2C3E50"
+                    },
+                    {
+                        "x_field": "volume_ventricle_AS_50",
+                        "y_field": "pressure_ventricle_AS_50",
+                        "field_label": "$\\mathregular{\u0394R_{aorta}}=250$%",
+                        "field_color":"#E74C3C",
+                        "data_linestyle": "dashed"
+                    },
+                    {
+                        "x_field": "volume_ventricle_AS_100",
+                        "y_field": "pressure_ventricle_AS_100",
+                        "field_label": "$\\mathregular{\u0394R_{aorta}}=500$%",
+                        "field_color": "#E74C3C",
+                        "data_linestyle": "dotted"
+                    },
+                    {
+                        "x_field": "volume_ventricle_AS_150",
+                        "y_field": "pressure_ventricle_AS_150",
+                        "field_label": "$\\mathregular{\u0394R_{aorta}}=750$%",
+                        "field_color": "#E74C3C",
+                        "data_linestyle": "solid"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Pressure\n(mmHg)",
+                "scaling_type": "close_fit",
+                "ticks": [0,220],
+                "series":
+                [
+                    {
+                        "x_field": "volume_ventricle_baseline",
+                        "y_field": "pressure_ventricle_baseline",
+                        "field_label": "Baseline",
+                        "field_color": "#2C3E50"
+                    },
+                    {
+                        "x_field": "volume_ventricle_AR_0.0005",
+                        "y_field": "pressure_ventricle_AR_0.0005",
+                        "field_label": "$\\mathregular{RV_{aorta}}=20$ (ml)",
+                        "field_color":"#3498DB",
+                        "data_linestyle": "dashed"
+                    },
+                    {
+                        "x_field": "volume_ventricle_AR_0.001",
+                        "y_field": "pressure_ventricle_AR_0.001",
+                        "field_label": "$\\mathregular{RV_{aorta}}=40$ (ml)",
+                        "field_color": "#3498DB",
+                        "data_linestyle": "dotted"
+                    },
+                    {
+                        "x_field": "volume_ventricle_AR_0.002",
+                        "y_field": "pressure_ventricle_AR_0.002",
+                        "field_label": "$\\mathregular{RV_{aorta}}=70$ (ml)",
+                        "field_color": "#3498DB",
+                        "data_linestyle": "solid"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Pressure\n(mmHg)",
+                "scaling_type": "close_fit",
+                "ticks": [0,220],
+                "series":
+                [
+                    {
+                        "x_field": "volume_ventricle_baseline",
+                        "y_field": "pressure_ventricle_baseline",
+                        "field_label": "Baseline",
+                        "field_color": "#2C3E50"
+                    },
+                    {
+                        "x_field": "volume_ventricle_MR_0.001",
+                        "y_field": "pressure_ventricle_MR_0.001",
+                        "field_label": "$\\mathregular{RV_{mitral}}=30$ (ml)",
+                        "field_color":"#2ECC71",
+                        "data_linestyle": "dashed"
+                    },
+                    {
+                        "x_field": "volume_ventricle_MR_0.002",
+                        "y_field": "pressure_ventricle_MR_0.002",
+                        "field_label": "$\\mathregular{RV_{mitral}}=60$ (ml)",
+                        "field_color": "#2ECC71",
+                        "data_linestyle": "dotted"
+                    },
+                    {
+                        "x_field": "volume_ventricle_MR_0.003",
+                        "y_field": "pressure_ventricle_MR_0.003",
+                        "field_label": "$\\mathregular{RV_{mitral}}=80$ (ml)",
+                        "field_color": "#2ECC71",
+                        "data_linestyle": "solid"
+                    }
+                ]
+            }
+        }
+    ]
+}
