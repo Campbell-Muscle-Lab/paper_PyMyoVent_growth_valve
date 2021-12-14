@@ -6,7 +6,7 @@
         "left_margin": 0,
         "right_margin": 0,
         "panel_height": 1.3,
-        "grid_wspace": -0.5
+        "grid_wspace": 100 
     },
     "x_display":{
         "global_x_field": "time",
@@ -19,7 +19,7 @@
         "y_label_fontsize": 14,
         "tick_fontsize": 12,
         "legend_fontsize": 10,
-        "y_label_pad": 50,
+        "y_label_pad": 40, 
         "legend_bbox_to_anchor": [1.0, 1.05],
         "palette": "muted", 
         "patch_alpha": 0.5
@@ -226,30 +226,15 @@
             "column": 1,
             "y_info":
             {
-                "label":"Wall stress\n(kN $\\mathregular{m^{-2}}$)",
+                "label":"Total\nwall stress\n(kN $\\mathregular{m^{-2}}$)",
                 "scaling_type": "close_fit",
                 "series":
                 [
                     {
                         "field": "hs_stress",
-                        "field_label": "Total",
-                        "scaling_factor": 1e-3,
-                        "style": "envelope"
-
-                    },
-                    {
-                        "field": "cb_stress",
-                        "field_label": "Active",
-                        "scaling_factor": 1e-3,
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "int_pas_stress",
-                        "field_label": "Passive",
                         "scaling_factor": 1e-3,
                         "style": "envelope"
                     }
-
                 ]
             }
         },
@@ -501,7 +486,7 @@
             "column": 3,
             "y_info":
             {
-                "label":"Aortic\nregurgitant\nvolume\n(ml)",
+                "label":"Aortic\nregurgitant\nvolume\n(ml)", 
                 "scaling_type": "close_fit",
                 "ticks": [0,46],
                 "series":

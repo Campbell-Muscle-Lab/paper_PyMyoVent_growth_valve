@@ -11,7 +11,7 @@
     "x_display":{
         "global_x_field": "time",
         "label": "Time (s)",
-        "global_x_ticks": [0,800]
+        "global_x_ticks": [0,1500]
     },
     "formatting":
     {
@@ -52,10 +52,18 @@
             "linewidth": "1.5"
         },
         {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 200,
+            "linestyle": "--",
+            "linewidth": "1.5",
+            "color": "red"
+        },
+        {
             "panel": 0,
             "type": "box",
             "x_coord": 50,
-            "y_rel_coord": 1.1,
+            "y_rel_coord": 1.8,
             "width": 250,
             "rel_height": 0.3
         },
@@ -63,7 +71,7 @@
             "panel": 0,
             "type": "box",
             "x_coord": 300,
-            "y_rel_coord": 1.1,
+            "y_rel_coord": 1.8,
             "face_color": "gray",
             "width": 100,
             "rel_height": 0.3
@@ -72,36 +80,73 @@
             "panel": 0,
             "type": "box",
             "x_coord": 400,
-            "y_rel_coord": 1.1,
-            "width": 400,
+            "y_rel_coord": 1.8,
+            "width": 1100,
             "rel_height": 0.3
         },
         {
             "panel": 0,
             "type": "text",
-            "label": "Mitral\n regurgitant volume (ml):",
-            "x_coord": 425,
-            "y_rel_coord": 1.8
+            "label": "Aortic\n resistance (%):",
+            "x_coord": 750,
+            "y_rel_coord": 2.4
         },
         {
             "panel": 0,
             "type": "text",
-            "label": "0",
+            "label": "100",
             "x_coord": 175,
+            "y_rel_coord": 1.93
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "600",
+            "x_coord": 950,
+            "y_rel_coord": 1.93
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 20,
+            "y_rel_coord": 1.1,
+            "width": 180,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 200,
+            "y_rel_coord": 1.1,
+            "width": 1300,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Baroreflex",
+            "x_coord": 750,
+            "y_rel_coord": 1.55
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "On",
+            "x_coord": 113,
             "y_rel_coord": 1.23
         },
         {
             "panel": 0,
             "type": "text",
-            "label": "60",
-            "x_coord": 600,
+            "label": "Off",
+            "x_coord": 850,
             "y_rel_coord": 1.23
         },
         {
             "panel": 9,
             "type": "box",
             "x_coord": 50,
-            "y_rel_coord": 1.1,
+            "y_rel_coord": 1.8,
             "width": 250,
             "rel_height": 0.3
         },
@@ -109,7 +154,7 @@
             "panel": 9,
             "type": "box",
             "x_coord": 300,
-            "y_rel_coord": 1.1,
+            "y_rel_coord": 1.8,
             "face_color": "gray",
             "width": 100,
             "rel_height": 0.3
@@ -118,36 +163,73 @@
             "panel": 9,
             "type": "box",
             "x_coord": 400,
-            "y_rel_coord": 1.1,
-            "width": 400,
+            "y_rel_coord": 1.8,
+            "width": 1100,
             "rel_height": 0.3
         },
         {
             "panel": 9,
             "type": "text",
-            "label": "Mitral\n regurgitant volume (ml):",
-            "x_coord": 425,
-            "y_rel_coord": 1.8
+            "label": "Aortic\n resistance (%):",
+            "x_coord": 750,
+            "y_rel_coord": 2.4
         },
         {
             "panel": 9,
             "type": "text",
-            "label": "0",
+            "label": "100",
             "x_coord": 175,
+            "y_rel_coord": 1.93
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "600",
+            "x_coord": 950,
+            "y_rel_coord": 1.93
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 20,
+            "y_rel_coord": 1.1,
+            "width": 180,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "box",
+            "x_coord": 200,
+            "y_rel_coord": 1.1,
+            "width": 1300,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "Baroreflex",
+            "x_coord": 750,
+            "y_rel_coord": 1.55
+        },
+        {
+            "panel": 9,
+            "type": "text",
+            "label": "On",
+            "x_coord": 113,
             "y_rel_coord": 1.23
         },
         {
             "panel": 9,
             "type": "text",
-            "label": "60",
-            "x_coord": 600,
+            "label": "Off",
+            "x_coord": 850,
             "y_rel_coord": 1.23
         },
         {
             "panel": 18,
             "type": "box",
             "x_coord": 50,
-            "y_rel_coord": 1.1,
+            "y_rel_coord": 1.8,
             "width": 250,
             "rel_height": 0.3
         },
@@ -155,7 +237,7 @@
             "panel": 18,
             "type": "box",
             "x_coord": 300,
-            "y_rel_coord": 1.1,
+            "y_rel_coord": 1.8,
             "face_color": "gray",
             "width": 100,
             "rel_height": 0.3
@@ -164,29 +246,66 @@
             "panel": 18,
             "type": "box",
             "x_coord": 400,
-            "y_rel_coord": 1.1,
-            "width": 400,
+            "y_rel_coord": 1.8,
+            "width": 1100,
             "rel_height": 0.3
         },
         {
             "panel": 18,
             "type": "text",
-            "label": "Mitral\n regurgitant volume (ml):",
-            "x_coord": 425,
-            "y_rel_coord": 1.8
+            "label": "Aortic\n resistance (%):",
+            "x_coord": 750,
+            "y_rel_coord": 2.4
         },
         {
             "panel": 18,
             "type": "text",
-            "label": "0",
+            "label": "100",
             "x_coord": 175,
+            "y_rel_coord": 1.93
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "600",
+            "x_coord": 950,
+            "y_rel_coord": 1.93
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 20,
+            "y_rel_coord": 1.1,
+            "width": 180,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "box",
+            "x_coord": 200,
+            "y_rel_coord": 1.1,
+            "width": 1300,
+            "rel_height": 0.3
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "Baroreflex",
+            "x_coord": 750,
+            "y_rel_coord": 1.55
+        },
+        {
+            "panel": 18,
+            "type": "text",
+            "label": "On",
+            "x_coord": 113,
             "y_rel_coord": 1.23
         },
         {
             "panel": 18,
             "type": "text",
-            "label": "60",
-            "x_coord": 600,
+            "label": "Off",
+            "x_coord": 850,
             "y_rel_coord": 1.23
         }
     ],
@@ -236,7 +355,6 @@
                         "style": "envelope"
 
                     }
-
                 ]
             }
         },
@@ -488,14 +606,12 @@
             "column": 3,
             "y_info":
             {
-                "label":"Mitral\nregurgitant\nvolume\n(ml)",
+                "label":"R$\\mathregular{_{aorta}}$\n(mmHg $\\mathregular{L^{-1} s}$)",
                 "scaling_type": "close_fit",
-                "ticks": [0,68],
                 "series":
                 [
                     {
-                        "field": "mitral_reg_volume_max",
-                        "scaling_factor": 1e3
+                        "field": "aorta_resistance"
                     }
 
                 ]
