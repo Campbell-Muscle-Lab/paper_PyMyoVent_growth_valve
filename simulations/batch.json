@@ -1,0 +1,204 @@
+{
+    "job": [
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AS_50/sim_inputs/protocol_AS_50.json",
+            "model_file_string": "simulation_AS_50/sim_inputs/model_AS_50.json",
+            "sim_options_file_string": "simulation_AS_50/sim_inputs/options_AS_50.json",
+            "output_handler_file_string": "simulation_AS_50/sim_inputs/output_handler_AS_50.json",
+            "sim_results_file_string": "simulation_AS_50/sim_output/data_AS_50.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AS_100/sim_inputs/protocol_AS_100.json",
+            "model_file_string": "simulation_AS_100/sim_inputs/model_AS_100.json",
+            "sim_options_file_string": "simulation_AS_100/sim_inputs/options_AS_100.json",
+            "output_handler_file_string": "simulation_AS_100/sim_inputs/output_handler_AS_100.json",
+            "sim_results_file_string": "simulation_AS_100/sim_output/data_AS_100.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AS_150/sim_inputs/protocol_AS_150.json",
+            "model_file_string": "simulation_AS_150/sim_inputs/model_AS_150.json",
+            "sim_options_file_string": "simulation_AS_150/sim_inputs/options_AS_150.json",
+            "output_handler_file_string": "simulation_AS_150/sim_inputs/output_handler_AS_150.json",
+            "sim_results_file_string": "simulation_AS_150/sim_output/data_AS_150.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_MR_0.001/sim_inputs/protocol_MR_0.001.json",
+            "model_file_string": "simulation_MR_0.001/sim_inputs/model_MR_0.001.json",
+            "sim_options_file_string": "simulation_MR_0.001/sim_inputs/options_MR_0.001.json",
+            "output_handler_file_string": "simulation_MR_0.001/sim_inputs/output_handler_MR_0.001.json",
+            "sim_results_file_string": "simulation_MR_0.001/sim_output/data_MR_0.001.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_MR_0.002/sim_inputs/protocol_MR_0.002.json",
+            "model_file_string": "simulation_MR_0.002/sim_inputs/model_MR_0.002.json",
+            "sim_options_file_string": "simulation_MR_0.002/sim_inputs/options_MR_0.002.json",
+            "output_handler_file_string": "simulation_MR_0.002/sim_inputs/output_handler_MR_0.002.json",
+            "sim_results_file_string": "simulation_MR_0.002/sim_output/data_MR_0.002.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_MR_0.003/sim_inputs/protocol_MR_0.003.json",
+            "model_file_string": "simulation_MR_0.003/sim_inputs/model_MR_0.003.json",
+            "sim_options_file_string": "simulation_MR_0.003/sim_inputs/options_MR_0.003.json",
+            "output_handler_file_string": "simulation_MR_0.003/sim_inputs/output_handler_MR_0.003.json",
+            "sim_results_file_string": "simulation_MR_0.003/sim_output/data_MR_0.003.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AR_0.0005/sim_inputs/protocol_AR_0.0005.json",
+            "model_file_string": "simulation_AR_0.0005/sim_inputs/model_AR_0.0005.json",
+            "sim_options_file_string": "simulation_AR_0.0005/sim_inputs/options_AR_0.0005.json",
+            "output_handler_file_string": "simulation_AR_0.0005/sim_inputs/output_handler_AR_0.0005.json",
+            "sim_results_file_string": "simulation_AR_0.0005/sim_output/data_AR_0.0005.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AR_0.001/sim_inputs/protocol_AR_0.001.json",
+            "model_file_string": "simulation_AR_0.001/sim_inputs/model_AR_0.001.json",
+            "sim_options_file_string": "simulation_AR_0.001/sim_inputs/options_AR_0.001.json",
+            "output_handler_file_string": "simulation_AR_0.001/sim_inputs/output_handler_AR_0.001.json",
+            "sim_results_file_string": "simulation_AR_0.001/sim_output/data_AR_0.001.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AR_0.002/sim_inputs/protocol_AR_0.002.json",
+            "model_file_string": "simulation_AR_0.002/sim_inputs/model_AR_0.002.json",
+            "sim_options_file_string": "simulation_AR_0.002/sim_inputs/options_AR_0.002.json",
+            "output_handler_file_string": "simulation_AR_0.002/sim_inputs/output_handler_AR_0.002.json",
+            "sim_results_file_string": "simulation_AR_0.002/sim_output/data_AR_0.002.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AS_100_rev/sim_inputs/protocol_AS_100_rev.json",
+            "model_file_string": "simulation_AS_100_rev/sim_inputs/model_AS_100_rev.json",
+            "sim_options_file_string": "simulation_AS_100_rev/sim_inputs/options_AS_100_rev.json",
+            "output_handler_file_string": "simulation_AS_100_rev/sim_inputs/output_handler_AS_100_rev.json",
+            "sim_results_file_string": "simulation_AS_100_rev/sim_output/data_AS_100_rev.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_MR_0.002_rev/sim_inputs/protocol_MR_0.002_rev.json",
+            "model_file_string": "simulation_MR_0.002_rev/sim_inputs/model_MR_0.002_rev.json",
+            "sim_options_file_string": "simulation_MR_0.002_rev/sim_inputs/options_MR_0.002_rev.json",
+            "output_handler_file_string": "simulation_MR_0.002_rev/sim_inputs/output_handler_MR_0.002_rev.json",
+            "sim_results_file_string": "simulation_MR_0.002_rev/sim_output/data_MR_0.002_rev.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AR_0.001_rev/sim_inputs/protocol_AR_0.001_rev.json",
+            "model_file_string": "simulation_AR_0.001_rev/sim_inputs/model_AR_0.001_rev.json",
+            "sim_options_file_string": "simulation_AR_0.001_rev/sim_inputs/options_AR_0.001_rev.json",
+            "output_handler_file_string": "simulation_AR_0.001_rev/sim_inputs/output_handler_AR_0.001_rev.json",
+            "sim_results_file_string": "simulation_AR_0.001_rev/sim_output/data_AR_0.001_rev.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AS_100_no_baro/sim_inputs/protocol_AS_100_no_baro.json",
+            "sim_options_file_string": "simulation_AS_100_no_baro/sim_inputs/options_AS_100_no_baro.json",
+            "model_file_string": "simulation_AS_100_no_baro/sim_inputs/model_baro_AS_100_no_baro.json",
+            "output_handler_file_string": "simulation_AS_100_no_baro/sim_inputs/output_handler_AS_100_no_baro.json",
+            "sim_results_file_string": "simulation_AS_100_no_baro/sim_output/data_AS_100_no_baro.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_MR_0.002_no_baro/sim_inputs/protocol_MR_0.002_no_baro.json",
+            "sim_options_file_string": "simulation_MR_0.002_no_baro/sim_inputs/options_MR_0.002_no_baro.json",
+            "model_file_string": "simulation_MR_0.002_no_baro/sim_inputs/model_baro_MR_0.002_no_baro.json",
+            "output_handler_file_string": "simulation_MR_0.002_no_baro/sim_inputs/output_handler_MR_0.002_no_baro.json",
+            "sim_results_file_string": "simulation_MR_0.002_no_baro/sim_output/data_MR_0.002_no_baro.csv"
+        },
+        {
+            "relative_path": true,
+            "protocol_file_string": "simulation_AR_0.001_no_baro/sim_inputs/protocol_AR_0.001_no_baro.json",
+            "sim_options_file_string": "simulation_AR_0.001_no_baro/sim_inputs/options_AR_0.001_no_baro.json",
+            "model_file_string": "simulation_AR_0.001_no_baro/sim_inputs/model_baro_AR_0.001_no_baro.json",
+            "output_handler_file_string": "simulation_AR_0.001_no_baro/sim_inputs/output_handler_AR_0.001_no_baro.json",
+            "sim_results_file_string": "simulation_AR_0.001_no_baro/sim_output/data_AR_0.001_no_baro.csv"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_ecc_0.00167/sim_inputs/model_g_ecc_0.00167.json",
+            "output_handler_file_string": "simulation_g_ecc_0.00167/sim_inputs/output_handler_g_ecc_0.00167.json",
+            "sim_results_file_string": "simulation_g_ecc_0.00167/sim_output/data_g_ecc_0.00167.csv",
+            "sim_options_file_string": "simulation_g_ecc_0.00167/sim_inputs/options_g_ecc_0.00167.json",
+            "protocol_file_string": "simulation_g_ecc_0.00167/sim_inputs/protocol_g_ecc_0.00167.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_ecc_0.0025/sim_inputs/model_g_ecc_0.0025.json",
+            "output_handler_file_string": "simulation_g_ecc_0.0025/sim_inputs/output_handler_g_ecc_0.0025.json",
+            "sim_results_file_string": "simulation_g_ecc_0.0025/sim_output/data_g_ecc_0.0025.csv",
+            "sim_options_file_string": "simulation_g_ecc_0.0025/sim_inputs/options_g_ecc_0.0025.json",
+            "protocol_file_string": "simulation_g_ecc_0.0025/sim_inputs/protocol_g_ecc_0.0025.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_ecc_0.005/sim_inputs/model_g_ecc_0.005.json",
+            "output_handler_file_string": "simulation_g_ecc_0.005/sim_inputs/output_handler_g_ecc_0.005.json",
+            "sim_results_file_string": "simulation_g_ecc_0.005/sim_output/data_g_ecc_0.005.csv",
+            "sim_options_file_string": "simulation_g_ecc_0.005/sim_inputs/options_g_ecc_0.005.json",
+            "protocol_file_string": "simulation_g_ecc_0.005/sim_inputs/protocol_g_ecc_0.005.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_ecc_0.01/sim_inputs/model_g_ecc_0.01.json",
+            "output_handler_file_string": "simulation_g_ecc_0.01/sim_inputs/output_handler_g_ecc_0.01.json",
+            "sim_results_file_string": "simulation_g_ecc_0.01/sim_output/data_g_ecc_0.01.csv",
+            "sim_options_file_string": "simulation_g_ecc_0.01/sim_inputs/options_g_ecc_0.01.json",
+            "protocol_file_string": "simulation_g_ecc_0.01/sim_inputs/protocol_g_ecc_0.01.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_ecc_0.015/sim_inputs/model_g_ecc_0.015.json",
+            "output_handler_file_string": "simulation_g_ecc_0.015/sim_inputs/output_handler_g_ecc_0.015.json",
+            "sim_results_file_string": "simulation_g_ecc_0.015/sim_output/data_g_ecc_0.015.csv",
+            "sim_options_file_string": "simulation_g_ecc_0.015/sim_inputs/options_g_ecc_0.015.json",
+            "protocol_file_string": "simulation_g_ecc_0.015/sim_inputs/protocol_g_ecc_0.015.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_con_0.00333/sim_inputs/model_g_con_0.00333.json",
+            "output_handler_file_string": "simulation_g_con_0.00333/sim_inputs/output_handler_g_con_0.00333.json",
+            "sim_results_file_string": "simulation_g_con_0.00333/sim_output/data_g_con_0.00333.csv",
+            "sim_options_file_string": "simulation_g_con_0.00333/sim_inputs/options_g_con_0.00333.json",
+            "protocol_file_string": "simulation_g_con_0.00333/sim_inputs/protocol_g_con_0.00333.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_con_0.005/sim_inputs/model_g_con_0.005.json",
+            "output_handler_file_string": "simulation_g_con_0.005/sim_inputs/output_handler_g_con_0.005.json",
+            "sim_results_file_string": "simulation_g_con_0.005/sim_output/data_g_con_0.005.csv",
+            "sim_options_file_string": "simulation_g_con_0.005/sim_inputs/options_g_con_0.005.json",
+            "protocol_file_string": "simulation_g_con_0.005/sim_inputs/protocol_g_con_0.005.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_con_0.01/sim_inputs/model_g_con_0.01.json",
+            "output_handler_file_string": "simulation_g_con_0.01/sim_inputs/output_handler_g_con_0.01.json",
+            "sim_results_file_string": "simulation_g_con_0.01/sim_output/data_g_con_0.01.csv",
+            "sim_options_file_string": "simulation_g_con_0.01/sim_inputs/options_g_con_0.01.json",
+            "protocol_file_string": "simulation_g_con_0.01/sim_inputs/protocol_g_con_0.01.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_con_0.02/sim_inputs/model_g_con_0.02.json",
+            "output_handler_file_string": "simulation_g_con_0.02/sim_inputs/output_handler_g_con_0.02.json",
+            "sim_results_file_string": "simulation_g_con_0.02/sim_output/data_g_con_0.02.csv",
+            "sim_options_file_string": "simulation_g_con_0.02/sim_inputs/options_g_con_0.02.json",
+            "protocol_file_string": "simulation_g_con_0.02/sim_inputs/protocol_g_con_0.02.json"
+        },
+        {
+            "relative_path": true,
+            "model_file_string": "simulation_g_con_0.03/sim_inputs/model_g_con_0.03.json",
+            "output_handler_file_string": "simulation_g_con_0.03/sim_inputs/output_handler_g_con_0.03.json",
+            "sim_results_file_string": "simulation_g_con_0.03/sim_output/data_g_con_0.03.csv",
+            "sim_options_file_string": "simulation_g_con_0.03/sim_inputs/options_g_con_0.03.json",
+            "protocol_file_string": "simulation_g_con_0.03/sim_inputs/protocol_g_con_0.03.json"
+        }
+    ]
+}

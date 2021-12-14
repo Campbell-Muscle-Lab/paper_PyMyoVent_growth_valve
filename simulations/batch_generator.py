@@ -14,7 +14,9 @@ def generate_batch_files(input_str="",
                         reverse_protocol = [],
                         growth_gains = [],
                         baro_protocol =[],
-                        growth_rain_factors =  []):
+                        growth_rate_factors =  [],
+                        growth_ecc_gain_factors = [],
+                        growth_con_gain_factors = []):
     # get roots
     base_files = os.listdir(input_str)
     cwd = os.getcwd()
@@ -164,8 +166,6 @@ def generate_batch_files(input_str="",
     if not baro_protocol == []:
         with open (os.path.join(input_str,'protocol_baro.json'),'r') as p:
             protocol_baro_base = json.load(p)
-        with open (os.path.join(input_str,'model_baro.json'),'r') as m:
-            model_baro_base = json.load(m)
 
         for p in baro_protocol:
 
@@ -225,9 +225,159 @@ def generate_batch_files(input_str="",
                 # now handle batch file     
                 temp_batch['job'].append(job)
 
-    if not growth_rain_factors == []:
+    if not growth_ecc_gain_factors == []:
         temp_model = model_base
-        for k_growth in growth_rain_factors:
+        for g_growth in growth_ecc_gain_factors:
+            gr_extension = 'g' + '_' + 'ecc' + '_' + str(g_growth)
+            print(g_growth)
+
+            # first build up job dict 
+            job = dict()
+            job['relative_path'] = True
+
+            for comp in temp_model['growth']['components']:
+                if comp['type'] == 'eccentric':
+                    comp['growth_factor'] = g_growth
+                    comp['antigrowth_factor'] = -1*g_growth
+
+            sim_folder_name = \
+                'simulation_' + gr_extension
+
+            new_model_file_name = \
+                'model_' + gr_extension +'.json'
+
+            sim_input_path_str = \
+                os.path.join(cwd,sim_folder_name,'sim_inputs')
+
+            new_model_file_path_str = \
+                os.path.join(sim_input_path_str,new_model_file_name)
+
+            if not os.path.isdir(sim_input_path_str):
+                print('Making dir')
+                os.makedirs(sim_input_path_str)
+            with open(new_model_file_path_str,'w') as f:
+                json.dump(temp_model,f,indent=4)
+                
+            job['model_file_string'] = \
+                sim_folder_name + '/' + 'sim_inputs' + '/' + new_model_file_name
+            
+            # now handle other files
+            # start with protocol and options
+            for f in base_files:
+                
+                if f == 'protocol.json':
+                    temp_protocol = protocol_base
+                    temp_protocol["perturbation"]["perturbations"] = \
+                        [{'level': "circulation",
+                        "variable": "mitral_insufficiency_conductance",
+                        "t_start_s": 300,
+                        "t_stop_s": 400,
+                        "total_change": 0.002}]
+                    temp_protocol['protocol']['no_of_time_steps'] = 2000000
+                    new_prot_file_name = 'protocol_' + gr_extension + '.json'
+                    new_prot_str = os.path.join(sim_input_path_str,new_prot_file_name)
+                    with open(new_prot_str,'w') as f:
+                        json.dump(temp_protocol,f,indent=4)
+                    
+                    job['protocol_file_string'] = \
+                        sim_folder_name + '/' + 'sim_inputs' + '/' + new_prot_file_name
+
+                elif f =='options.json':
+                    base_file_str = os.path.join(input_str,f)
+                    new_file_name = 'options_' + gr_extension + '.json'
+                    new_file_str = os.path.join(sim_input_path_str,new_file_name)
+                    shutil.copy(base_file_str, new_file_str)
+
+                    job['sim_options_file_string'] = \
+                        sim_folder_name + '/' + 'sim_inputs' + '/' + new_file_name
+
+                job = handle_output_handler_file_for_gr_gains(input_str = input_str,
+                                                        sim_input_path_str = sim_input_path_str,
+                                                        sim_folder_name=sim_folder_name,
+                                                        base_files=base_files,
+                                                        extension=gr_extension,
+                                                        job_dict=job)
+
+            temp_batch['job'].append(job)
+
+    if not growth_con_gain_factors == []:
+        temp_model = model_base
+        for g_growth in growth_con_gain_factors:
+            gr_extension = 'g' + '_' + 'con' + '_' + str(g_growth)
+            print(g_growth)
+
+            # first build up job dict 
+            job = dict()
+            job['relative_path'] = True
+
+            for comp in temp_model['growth']['components']:
+                if comp['type'] == 'concentric':
+                    comp['growth_factor'] = g_growth
+                    comp['antigrowth_factor'] = -1*g_growth
+
+            sim_folder_name = \
+                'simulation_' + gr_extension
+
+            new_model_file_name = \
+                'model_' + gr_extension +'.json'
+
+            sim_input_path_str = \
+                os.path.join(cwd,sim_folder_name,'sim_inputs')
+
+            new_model_file_path_str = \
+                os.path.join(sim_input_path_str,new_model_file_name)
+
+            if not os.path.isdir(sim_input_path_str):
+                print('Making dir')
+                os.makedirs(sim_input_path_str)
+            with open(new_model_file_path_str,'w') as f:
+                json.dump(temp_model,f,indent=4)
+                
+            job['model_file_string'] = \
+                sim_folder_name + '/' + 'sim_inputs' + '/' + new_model_file_name
+            
+            # now handle other files
+            # start with protocol and options
+            for f in base_files:
+                
+                if f == 'protocol.json':
+                    temp_protocol = protocol_base
+                    temp_protocol["perturbation"]["perturbations"] = \
+                        [{"level": "circulation",
+                        "variable": "aorta_resistance",
+                        "t_start_s": 300,
+                        "t_stop_s": 400,
+                        "total_change": 100}]
+                    temp_protocol['protocol']['no_of_time_steps'] = 2000000
+                    new_prot_file_name = 'protocol_' + gr_extension + '.json'
+                    new_prot_str = os.path.join(sim_input_path_str,new_prot_file_name)
+                    with open(new_prot_str,'w') as f:
+                        json.dump(temp_protocol,f,indent=4)
+                    
+                    job['protocol_file_string'] = \
+                        sim_folder_name + '/' + 'sim_inputs' + '/' + new_prot_file_name
+
+                elif f =='options.json':
+                    base_file_str = os.path.join(input_str,f)
+                    new_file_name = 'options_' + gr_extension + '.json'
+                    new_file_str = os.path.join(sim_input_path_str,new_file_name)
+                    shutil.copy(base_file_str, new_file_str)
+
+                    job['sim_options_file_string'] = \
+                        sim_folder_name + '/' + 'sim_inputs' + '/' + new_file_name
+
+                job = handle_output_handler_file_for_gr_gains(input_str = input_str,
+                                                        sim_input_path_str = sim_input_path_str,
+                                                        sim_folder_name=sim_folder_name,
+                                                        base_files=base_files,
+                                                        extension=gr_extension,
+                                                        job_dict=job)
+
+            temp_batch['job'].append(job)
+            
+    if not growth_rate_factors == []:
+        temp_model = model_base
+        for k_growth in growth_rate_factors:
             gr_extension = 'k_drive' + '_' + str(k_growth)
             
             # first build up job dict 
@@ -265,7 +415,7 @@ def generate_batch_files(input_str="",
                 if f == 'protocol.json':
                     temp_protocol = protocol_base
                     temp_protocol["perturbation"]["perturbations"] = []
-                    temp_protocol['protocol']['no_of_time_steps'] = 600000
+                    temp_protocol['protocol']['no_of_time_steps'] = 1000000
                     new_prot_file_name = 'protocol_' + gr_extension + '.json'
                     new_prot_str = os.path.join(sim_input_path_str,new_prot_file_name)
                     with open(new_prot_str,'w') as f:
@@ -334,6 +484,7 @@ def handle_model_and_option_files(input_str = "",
             shutil.copy(base_file_str, new_file_str)
            
     return job_dict
+
 def handle_output_handler_file(input_str = "",
                                     sim_input_path_str = "",
                                     sim_folder_name=[],
@@ -537,11 +688,16 @@ if __name__ == '__main__':
                         "total_change": [0.001]}
                     ]
 
-    growth_rain_factors = [0.01,0.1,0.2,0.5,1]
+    growth_rate_factors = [0.01,0.1,0.2,0.5,1]
+
+    growth_ecc_gain_factors = [1.67e-3,2.5e-3,5e-3,1e-2,1.5e-2] 
+    growth_con_gain_factors = [3.33e-3,5e-3,1e-2,2e-2,3e-2]
 
     #print(json.dumps(protocol_to_change,indent=4))
     generate_batch_files(input_str = base_inputs_path,
                         protocol_to_change=protocol_to_change,
                         reverse_protocol = reverse_protocol,
                         baro_protocol = baro_protocol,
-                        growth_rain_factors = growth_rain_factors)
+                        growth_rate_factors = [],
+                        growth_ecc_gain_factors = growth_ecc_gain_factors,
+                        growth_con_gain_factors = growth_con_gain_factors)
