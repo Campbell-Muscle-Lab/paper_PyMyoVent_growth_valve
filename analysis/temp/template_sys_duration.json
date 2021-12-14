@@ -1,0 +1,58 @@
+{
+    "layout": 
+    {
+        "fig_width": 5, 
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 3,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "time_baseline",
+        "label": "Fraction of a cardiac cycle",
+        "global_x_ticks": [0,1]
+    }, 
+    "formatting":
+    {
+        "x_label_fontsize": 12,
+        "y_label_fontsize": 12,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [0.7, 1.05],
+        "palette": "muted",
+        "patch_alpha": 0.5,
+        "max_rows_per_legend":5 
+    },
+    "processing":
+    {
+        "envelope_n": 2000 
+    },
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "ATPase\nto\nmyofibrils\n(kJ $\\mathregular{[m^{3} S]^{-1}}$)",
+                "ticks": [0,440], 
+                "series":
+                [
+                    {
+                        "field": "ATPase_to_myo_baseline",
+                        "field_label": "Baseline",
+                        "field_color": "#3498DB",
+                        "scaling_factor": 1e-3
+                    },
+                    {
+                        "field": "ATPase_to_myo_growth",
+                        "field_label": "Growth",
+                        "field_color": "#E74C3C",
+                        "scaling_factor": 1e-3
+                    }
+                ]
+            }
+        }
+    ]
+}

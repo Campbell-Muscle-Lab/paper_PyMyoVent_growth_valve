@@ -15,14 +15,14 @@
     },
     "formatting":
     {
-        "x_label_fontsize": 10,
-        "y_label_fontsize": 10,
-        "tick_fontsize": 10,
-        "legend_fontsize": 8,
+        "x_label_fontsize": 12,
+        "y_label_fontsize": 12,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
         "y_label_pad": 50,
         "legend_bbox_to_anchor": [1.0, 1.05],
         "palette": "muted",
-        "patch_alpha": 0.5
+        "patch_alpha": 0.5 
     },
     "processing":
     {
@@ -100,7 +100,20 @@
     ],
     "panels":
     [
-        
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Heart\nrate\n(bpm)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "heart_rate"
+                    }
+                ]
+            }
+        },   
         {
             "column": 1,
             "y_info":
@@ -115,8 +128,13 @@
                         "scaling_factor": 1e-3
                     },
                     {
+                        "field": "mean_ATPase_to_myo",
+                        "field_label": "Mean S$\\mathregular{_{con}}$",
+                        "scaling_factor": 1e-3
+                    },
+                    {
                         "field": "gr_concentric_set",
-                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_label": "S$\\mathregular{_{con,set}}$",
                         "field_color": "red",
                         "scaling_factor": 1e-3
                     }
@@ -127,7 +145,7 @@
             "column": 1,
             "y_info":
             {
-                "label": "Mean\nATPase\nto\nmyofibrils\n(kJ $\\mathregular{[m^{3} S]^{-1}}$)",
+                "label": "ATPase\nto\nmyofibrils\n(kJ $\\mathregular{[m^{3} S]^{-1}}$)",
                 "series":
                 [
                     {
@@ -137,9 +155,52 @@
                     },
                     {
                         "field": "gr_concentric_set",
-                        "field_label": "S$\\mathregular{_{set}}$",
+                        "field_label": "S$\\mathregular{_{con,set}}$",
                         "field_color": "red",
                         "scaling_factor": 1e-3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "G$\\mathregular{_{a,con}}$",
+                "ticks": [0,1], 
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_g",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "G$\\mathregular{_{c,con}}$\n($\\mathregular{\\times 10^{-3}}$)",
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_c",
+                        "style": "envelope",
+                        "scaling_factor": 1e3
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\nwall volume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume"
                     }
                 ]
             }
