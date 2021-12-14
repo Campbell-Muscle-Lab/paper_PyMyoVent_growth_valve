@@ -20,6 +20,9 @@ from matplotlib import patches as pat
 from matplotlib.patches import Patch
 from matplotlib.patches import Rectangle
 import seaborn as sns
+import statannot 
+from statannotations.Annotator import Annotator
+from itertools import combinations
 
 
 def default_formatting():
@@ -38,6 +41,7 @@ def default_formatting():
     formatting['axis_linewidth'] = 1.5
     formatting['x_label_fontsize'] = 12
     formatting['x_label_pad'] = 0
+    formatting['x_ticks_rotation'] = 0
     formatting['y_label_rotation'] = 0
     formatting['y_label_fontsize'] = 12
     formatting['y_label_pad'] = 30
@@ -48,7 +52,8 @@ def default_formatting():
     formatting['tick_fontsize'] = 11
     formatting['patch_alpha'] = 0.3
     formatting['max_rows_per_legend'] = 4
-    formatting['palette_list'] = ['tab10','Pastel1','Dark2','Set2','Set1','Accent']
+    formatting['palette_list'] = ['tab10','Pastel1','Dark2','Set2','Set1','Accent'],
+    formatting['legend_title'] = None
     
     # pointplot
     formatting['join'] = True
@@ -93,6 +98,31 @@ def default_box_formatting():
 
     return box_formatting
 
+def default_bar_formatting():
+    """
+    Sets default formatting for bar plot (saturtion, box_width, linewidth, ...)
+
+    Returns
+    -------
+    bar_formatting : dict
+        dictionnary containing the default formatting for bar plot.
+
+    """
+    bar_formatting = dict()
+    bar_formatting['color_saturation'] = 1
+    bar_formatting['box_width'] = 0.75
+    bar_formatting['dodge'] = True
+    bar_formatting['confidence_int'] = 'sd'
+    bar_formatting['estimator'] = np.mean
+    bar_formatting['dodge'] = True
+    bar_formatting['orient'] = "v"
+    bar_formatting['errwidth'] = None
+    bar_formatting['errcolor'] = None
+    bar_formatting['capsize'] = None
+    bar_formatting['edgecolor'] = None
+
+    return bar_formatting
+
 def default_point_formatting():
     """
     Sets default formatting for point plot (marker_type, marker_size, jitter, ...)
@@ -124,7 +154,7 @@ def default_layout():
     layout : dict
         dictionnary containing the default layout.
 
-    """
+    """  
     layout = dict()
     layout['fig_width'] = 3.5
     layout['panel_height'] = 1
@@ -132,10 +162,23 @@ def default_layout():
     layout['bottom_margin'] = 0.1
     layout['left_margin'] = 0.1
     layout['right_margin'] = 0.1
-    layout['grid_wspace'] = 0.1
+    layout['grid_wspace'] = 0.1 
     layout['grid_hspace'] = 0.1
 
-    return layout
+    return layout 
+
+def default_stats():
+
+    stats = dict()
+    stats['test'] = 't_test'
+    stats['location'] = 'outside'
+    stats['pvalue_thresholds_star'] = \
+        [[1e-4, "****"], [1e-3, "***"], [1e-2, "**"], [0.05, "*"], [1, "ns"]] 
+    stats['pvalue_thresholds_text'] = \
+        [[1e-5, "1e-5"], [1e-4, "1e-4"], [1e-3, "0.001"], [1e-2, "0.01"]]
+    stats['text_format'] = 'star'
+
+    return stats
 
 def multi_panel_cat_from_flat_data(
         data_file_string = [],
@@ -194,6 +237,12 @@ def multi_panel_cat_from_flat_data(
     if ('box_formatting' in template_data):
         for entry in template_data['box_formatting']:
             box_formatting[entry] = template_data['box_formatting'][entry]
+
+    # Pull default formatting for box plot, then overwite any values from the template
+    bar_formatting = default_bar_formatting()
+    if ('baro_formatting' in template_data):
+        for entry in template_data['baro_formatting']:
+            bar_formatting[entry] = template_data['baro_formatting'][entry]
 
     # Pull default formatting for point plot, then overwite any values from the template
     point_formatting = default_point_formatting()
@@ -305,6 +354,15 @@ def multi_panel_cat_from_flat_data(
 
     # Now return to panel data, scan through adding plots as you go
     row_counters = np.zeros(no_of_columns, dtype=int)
+
+    # check for global stats if any 
+    global_stats_defined = 0 
+    stats = default_stats()
+    if 'stats' in template_data:
+        global_stats_defined = 1 
+        for st in  template_data['stats'].keys():
+            stats[st] = template_data['stats'][st]
+
     for i,p_data in enumerate(panel_data):
 
         # Update row counters and add axis
@@ -322,6 +380,21 @@ def multi_panel_cat_from_flat_data(
 
         legend_symbols = []
         legend_strings = []
+
+        # handle statistics if any
+        p_data['stat_data'] = pd.DataFrame()
+        p_data['stats_defined'] = 0
+        # first case: if stats is defined globally
+        if global_stats_defined:
+            p_data['stats'] = stats
+            p_data['stats_defined'] = global_stats_defined
+        # second case: if it is defined locally for a pannel
+        if 'stats' in p_data:
+            p_data['stats_defined'] = 1
+            for st in p_data['stats'].keys():
+                stats[st] = p_data['stats'][st]
+            p_data['stats'] = stats
+           
 
         # Cycle through the y_data
         for j,y_d in enumerate(p_data['y_info']['series']):
@@ -380,11 +453,14 @@ def multi_panel_cat_from_flat_data(
                 if y_d['log_display']=='on':
                     y = np.log10(y)
 
+            if p_data['stats_defined']:
+                p_data['stat_data'] = \
+                    p_data['stat_data'].append(data_structure, ignore_index=True)
+
             # Track min and max y
             if (j==0):
                 min_y = y.min()
                 max_y = y.max()
-
             min_y = np.amin([min_y, np.amin(y)])
             max_y = np.amax([max_y, np.amax(y)])
             # plot striplot depending on setyle
@@ -466,14 +542,33 @@ def multi_panel_cat_from_flat_data(
                                 hue_order = y_d['hue_order'],
                                 errwidth = y_d['errwidth'],
                                 capsize = y_d['capsize'])
-                
-                
 
+            if y_d['style'] == 'bar':
+                for bf in bar_formatting.keys():
+                    if bf not in y_d:
+                        y_d[bf] = bar_formatting[bf]
+                if y_d['estimator'] == 'median':
+                   y_d['estimator'] = np.median 
+                elif y_d['estimator'] == 'mean':
+                    y_d['estimator'] = np.mean
+                sns.barplot(x = x, y = y, hue=hue,
+                            ax = ax[i],
+                            saturation = y_d['color_saturation'],
+                            dodge = y_d['dodge'],
+                            palette = y_d['field_palette'],
+                            order = p_data['x_order'],
+                            hue_order = y_d['hue_order'],
+                            errwidth = y_d['errwidth'],
+                            capsize = y_d['capsize'],
+                            edgecolor=".2")
+                
                 # handle legend 
                 legend_symbols, legend_strings = \
                     handle_legend(hue,p_data,y_d,legend_symbols,
-                                legend_strings,strip_formatting)
-                
+                                legend_strings,box_formatting)
+
+            
+        
         # Tidy up axes and legends
         if ('ticks' in p_data['y_info']):
             ylim=tuple(p_data['y_info']['ticks'])
@@ -491,8 +586,14 @@ def multi_panel_cat_from_flat_data(
         for a in ['left','bottom']:
             ax[i].spines[a].set_linewidth(formatting['axis_linewidth'])
         ax[i].tick_params('both',
-                width = formatting['axis_linewidth'])
+                width = formatting['axis_linewidth']) 
 
+        ha = 'center'
+        if formatting['x_ticks_rotation'] > 0:
+            ha = 'right'
+        ax[i].set_xticklabels(ax[i].get_xticklabels(),
+                                rotation = formatting['x_ticks_rotation'],
+                                ha = ha)
         for tick_label in ax[i].get_xticklabels():
             tick_label.set_fontname(formatting['fontname'])
             tick_label.set_fontsize(formatting['tick_fontsize'])
@@ -524,6 +625,9 @@ def multi_panel_cat_from_flat_data(
 
         # Add legend if it exists
         if legend_symbols:
+            if 'legend_title' not in p_data['y_info']:
+                    p_data['y_info']['legend_title'] = \
+                        formatting['legend_title'] 
             leg = ax[i].legend(legend_symbols, legend_strings,
                          loc = formatting['legend_location'],
                          handlelength = formatting['legend_handlelength'],
@@ -532,10 +636,42 @@ def multi_panel_cat_from_flat_data(
                          prop={'family': formatting['fontname'],
                                'size': formatting['legend_fontsize']},
                          ncol = int(np.ceil(len(legend_symbols)/
-                                            formatting['max_rows_per_legend'])))
+                                            formatting['max_rows_per_legend'])),
+                         title = p_data['y_info']['legend_title'])
             leg.get_frame().set_linewidth(formatting['axis_linewidth'])
             leg.get_frame().set_edgecolor("black")
+
+        
         handle_annotations(template_data, ax[i], i, formatting)
+
+        if p_data['stats_defined']:
+            box_pairs = []
+            for box_p in p_data['stats']['box_pairs']:
+                box_pairs.append((box_p[0],box_p[1]))
+            if p_data['stats']['text_format'] == 'star':
+                pvalue_thresholds = stats['pvalue_thresholds_star']
+            else:
+                pvalue_thresholds = stats['pvalue_thresholds_text']
+            """statannot.add_stat_annotation(
+                                            ax[i],
+                                            data = p_data['stat_data'],
+                                            x=p_data['x_field'],
+                                            y=y_d['field'],
+                                            order = p_data['x_order'],
+                                            test=p_data['stats']['test'],
+                                            text_format=p_data['stats']['text_format'],
+                                            loc=p_data['stats']['location'],
+                                            box_pairs = box_pairs,
+                                            pvalue_thresholds = pvalue_thresholds
+                                        ) """
+            
+            annotator = Annotator(ax[i], box_pairs, data=p_data['stat_data'],
+                                 x=p_data['x_field'], y=y_d['field'],
+                                 order = p_data['x_order'])
+            annotator.configure(test=p_data['stats']['test'], 
+                                text_format=p_data['stats']['text_format'],
+                                loc=p_data['stats']['location'])
+            annotator.apply_and_annotate()
 
     # Tidy overall figure
     # Move plots inside margins
@@ -591,6 +727,23 @@ def handle_legend(hue,
                     legend_strings.append(y_d["field_label"])
 
     elif y_d['style'] == 'box':
+        if hue is not None:
+            for k,h in enumerate(y_d['hue_order']):
+                legend_symbols.append(Patch(facecolor=sns.color_palette(palette =y_d['field_palette'])[k],
+                                        alpha=style_formatting['color_saturation']))
+                field_label = ''
+                if y_d['field_label']:
+                    field_label  = f'({y_d["field_label"]})'
+                str = f'{h} {field_label}'
+                legend_strings.append(str)
+        else:
+            if y_d['field_label']:
+                for l,o in enumerate(y_d['x_order']):
+                    legend_symbols.append(Patch(facecolor=sns.color_palette(palette =y_d['field_palette'])[l],
+                                                alpha=style_formatting['color_saturation']))
+                    legend_strings.append(y_d["field_label"])
+
+    elif y_d['style'] == 'bar':
         if hue is not None:
             for k,h in enumerate(y_d['hue_order']):
                 legend_symbols.append(Patch(facecolor=sns.color_palette(palette =y_d['field_palette'])[k],

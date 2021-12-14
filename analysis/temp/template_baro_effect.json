@@ -1,0 +1,135 @@
+{
+    "layout":
+    {
+        "fig_width": 10,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 2,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "valvular_disorder",
+        "label": "",
+        "global_hue": "baro_status",
+        "order": ["Aortic stenosis", "Aortic insufficiency", "Mitral insufficiency"]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 14,
+        "y_label_fontsize": 14,
+        "tick_fontsize": 10,
+        "legend_fontsize": 12,
+        "x_ticks_rotation" : 45, 
+        "y_label_pad": 40,
+        "x_label_pad":20,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "color_theme_category": "Bold_7",
+        "patch_alpha": 0.5,
+        "data_linewidth": 1,
+        "max_rows_per_legend":6
+    },
+    "bar_formatting":
+    {
+        "edgecolor": "black"
+    },
+ 
+    "panels": 
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "LV\nend-diastolic\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        
+                        "field": "LVEDV",
+                        "style": "bar",
+                        "field_palette" : "Set2"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "LV\nend-systolic\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "LVESV",
+                        "style": "bar",
+                        "field_palette" : "Set2"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\nwall\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "Vol_wall",
+                        "style": "bar",
+                        "field_palette" : "Set2"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "LV\nend-systolic\npressure\n(mmHg)",
+
+                "series":
+                [
+                    {
+                        "field": "ESP_vent",
+                        "style": "bar",
+                        "field_palette" : "Set2"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "End-systolic\narterial pressure\n(mmHg)",
+
+                "series":
+                [
+                    {
+                        "field": "ESap",
+                        "style": "bar",
+                        "field_palette" : "Set2"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "End-diastolic\narterial pressure\n(mmHg)",
+
+                "series":
+                [
+                    {
+                        "field": "EDap",
+                        "style": "bar",
+                        "field_palette" : "Set2"
+                    }
+                ]
+            }
+        }
+        
+    ]
+}
