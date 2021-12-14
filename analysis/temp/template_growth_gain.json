@@ -1,0 +1,229 @@
+{
+    "layout": 
+    {
+        "fig_width": 12, 
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 3,
+        "grid_wspace": -0.5
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)",
+        "global_x_ticks": [0,1000]
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 14,
+        "y_label_fontsize": 14,
+        "tick_fontsize": 12,
+        "legend_fontsize": 10,
+        "y_label_pad": 50,
+        "legend_bbox_to_anchor": [1.0, 1.05],
+        "palette": "muted",
+        "patch_alpha": 0.5,
+        "max_rows_per_legend":5 
+    },
+    "processing":
+    {
+        "envelope_n": 2000 
+    },
+    "annotations":
+    [
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 50,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 300,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 400,
+            "linestyle": "--",
+            "linewidth": "1.5"
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.05,
+            "width": 250,
+            "rel_height": 0.2
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.05,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.2
+        },
+        {
+            "panel": 0,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.05,
+            "width": 600,
+            "rel_height": 0.2
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "Aortic resistance (%):",
+            "x_coord": 500,
+            "y_rel_coord": 1.35
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "100",
+            "x_coord": 175,
+            "y_rel_coord": 1.15
+        },
+        {
+            "panel": 0,
+            "type": "text",
+            "label": "600",
+            "x_coord": 700,
+            "y_rel_coord": 1.15
+        },
+        {
+            "panel": 1,
+            "type": "box",
+            "x_coord": 50,
+            "y_rel_coord": 1.05,
+            "width": 250,
+            "rel_height": 0.2
+        },
+        {
+            "panel": 1,
+            "type": "box",
+            "x_coord": 300,
+            "y_rel_coord": 1.05,
+            "face_color": "gray",
+            "width": 100,
+            "rel_height": 0.2
+        },
+        {
+            "panel": 1,
+            "type": "box",
+            "x_coord": 400,
+            "y_rel_coord": 1.05,
+            "width": 600,
+            "rel_height": 0.2
+        },
+        {
+            "panel": 1,
+            "type": "text",
+            "label": "Mitral regurgitant volume (ml):",
+            "x_coord": 500,
+            "y_rel_coord": 1.35
+        },
+        {
+            "panel": 1,
+            "type": "text",
+            "label": "0",
+            "x_coord": 175,
+            "y_rel_coord": 1.15 
+        },
+        {
+            "panel": 1,
+            "type": "text",
+            "label": "60",
+            "x_coord": 700,
+            "y_rel_coord": 1.15
+        }
+    ],
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label":"Ventricular\nwall\nvolume\n(liters)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume_g_con_0.00333",
+                        "field_label": "$\\mathregular{\u03B3_{growth,con}} = 0.33\\mathregular{\u03B3_{0,con}}$",
+                        "field_color":"#8E44AD"
+                    },
+                    {
+                        "field": "ventricle_wall_volume_g_con_0.005",
+                        "field_label": "$\\mathregular{\u03B3_{growth,con}} = 0.5\\mathregular{\u03B3_{0,con}}$",
+                        "field_color":"#3498DB"
+                    },
+                    {
+                        "field": "ventricle_wall_volume_g_con_0.01",
+                        "field_label": "$\\mathregular{\u03B3_{growth,con}} = \\mathregular{\u03B3_{0,con}}$",
+                        "field_color":"#2ECC71"
+                    },
+                    
+                    {
+                        "field": "ventricle_wall_volume_g_con_0.02",
+                        "field_label": "$\\mathregular{\u03B3_{growth,con}} = 2\\mathregular{\u03B3_{0,con}}$",
+                        "field_color":"#F39C12"
+                    },
+                    {
+                        "field": "ventricle_wall_volume_g_con_0.03",
+                        "field_label": "$\\mathregular{\u03B3_{growth,con}} = 3\\mathregular{\u03B3_{0,con}}$",
+                        "field_color":"#E74C3C"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label":"Number\nof\nhalf-sarcomeres\n(thousands)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "n_hs_g_ecc_0.00167",
+                        "field_label": "$\\mathregular{\u03B3_{growth,ecc}} = 0.33\\mathregular{\u03B3_{0,ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color":"#8E44AD"
+                    },
+                    {
+                        "field": "n_hs_g_ecc_0.0025",
+                        "field_label": "$\\mathregular{\u03B3_{growth,ecc}} = 0.5\\mathregular{\u03B3_{0,ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color":"#3498DB"
+                    },
+                    {
+                        "field": "n_hs_g_ecc_0.005",
+                        "field_label": "$\\mathregular{\u03B3_{growth,ecc}} = \\mathregular{\u03B3_{0,ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color":"#2ECC71"
+                    },
+                    {
+                        "field": "n_hs_g_ecc_0.01",
+                        "field_label": "$\\mathregular{\u03B3_{growth,ecc}} = 2\\mathregular{\u03B3_{0,ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color":"#F39C12"
+                    },
+                    {
+                        "field": "n_hs_g_ecc_0.015",
+                        "field_label": "$\\mathregular{\u03B3_{growth,ecc}} = 3\\mathregular{\u03B3_{0,ecc}}$",
+                        "scaling_factor": 1e-3,
+                        "field_color":"#E74C3C"
+                    }
+                ]
+            }
+        }
+    ]
+}
