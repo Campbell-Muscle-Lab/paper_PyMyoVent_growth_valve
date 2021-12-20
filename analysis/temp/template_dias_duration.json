@@ -35,7 +35,7 @@
             "column": 1,
             "y_info":
             {
-                "label": "Half-sarcomere\npassive\nstress\n(kN $\\mathregular{m^{-2}}$)",
+                "label": "Intracellular\npassive stress\n(kN $\\mathregular{m^{-2}}$)", 
                 "scaling_type": "close_fit",
                 "ticks": [-0.05,2.5], 
                 "series":
