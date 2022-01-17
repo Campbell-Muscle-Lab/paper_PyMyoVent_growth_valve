@@ -1,0 +1,546 @@
+{
+    "layout":
+    {
+        "fig_width": 14,
+        "top_margin": 0,
+        "left_margin": 0,
+        "right_margin": 0,
+        "panel_height": 1,
+        "grid_wspace": 1,
+        "grid_hspace": 1
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)"
+    },
+    "processing":{
+        "envelope_rel_width": 0.02
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 10,
+        "y_label_fontsize": 10,
+        "tick_fontsize": 7,
+        "legend_fontsize": 6,
+        "label_fontsize": 3,
+        "y_label_pad": 10,
+        "bbox_to_anchor": [1.3, 1],
+        "patch_alpha": 0.3
+    },
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Arterial\npressure\n(mm Hg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_arteries",
+                        "field_label": "Pressure",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "baro_P_set",
+                        "field_label": "Baroreflex setpoint",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\npressure\n(mm Hg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_ventricle",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "n_hs",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "n_hs",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "scaling_type": "close_fit",
+            "y_info":
+            {
+                "label": "Wall\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Wall\nthickness\n(m)",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Stroke\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "stroke_volume",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ejection\nfraction",
+                "series":
+                [
+                    {
+                        "field": "ejection_fraction"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Venous\npressure\n(mm Hg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_veins",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Myosin\nATPase",
+                "series":
+                [
+                    {
+                        "field": "myosin_ATPase",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Baroreceptor\nactive",
+                "series":
+                [
+                    {
+                        "field": "baro_active",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Baroreceptor",
+                "series":
+                [
+                    {
+                        "field": "baro_B_a",
+                        "field_label": "baro B_a",
+                        "style": "line"
+                    },
+                    {
+                        "field": "baro_B_b",
+                        "field_label": "baro B_b",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "HR rc",
+                "series":
+                [
+                    {
+                        "field": "baro_B_c_heart_rate_t_quiescent_period",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Heart\nrate\n(BPM)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "heart_rate"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "[ATP]",
+                "series":
+                [
+                    {
+                        "field": "intracell_ATP_conc"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "ATP rates",
+                "series":
+                [
+                    {
+                        "field": "myosin_ATPase",
+                        "field_label": "myosin_ATPase"
+                    },
+                    {
+                        "field": "mitochondrial_ATP_rate",
+                        "field_label": "mitochondrial_ATP_rate"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Ca",
+                "series":
+                [
+                    {
+                        "field": "Ca_cytosol",
+                        "scaling_factor": 1e6,
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Length",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "hs_length",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Component\nStress",
+                "series":
+                [
+                    {
+                        "field": "cpt_cb_stress",
+                        "field_label": "CB stress",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "field_label": "Int pas stress",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "cpt_ext_pas_stress",
+                        "field_label": "Ext pas stress",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Wall\nstress",
+                "series":
+                [
+                    {
+                        "field": "cb_stress",
+                        "field_label": "CB force",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "int_pas_stress",
+                        "field_label": "Int pas stress",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "ext_pas_stress",
+                        "field_label": "Ext pas stress",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Passive\nwall\nstress",
+                "series":
+                [
+                    {
+                        "field": "int_pas_stress",
+                        "field_label": "Int pas stress",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "ext_pas_stress",
+                        "field_label": "Ext pas stress",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Thin",
+                "series":
+                [
+                    {
+                        "field": "n_on",
+                        "field_label": "N_on",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "n_off",
+                        "field_label": "N_off",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Thin",
+                "series":
+                [
+                    {
+                        "field": "n_bound",
+                        "field_label": "N_bound",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "n_overlap",
+                        "field_label": "N_overlap",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Thick",
+                "series":
+                [
+                    {
+                        "field": "M_SRX",
+                        "field_label": "SRX",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "M_DRX",
+                        "field_label": "DRX",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "M_FG",
+                        "field_label": "FG",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Growth",
+                "series":
+                [
+                    {
+                        "field": "growth_active"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Component\nPassive\nStress",
+                "series":
+                [
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "field_label": "Int pas stress",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "gr_eccentric_set",
+                        "field_label": "Ecc setpoint"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Eccentric\ngrowth\ng",
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_g",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Eccentric\ngrowth\nc",
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_c",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Component\nTotal\nStress",
+                "series":
+                [
+                    {
+                        "field": "cpt_myofil_stress",
+                        "field_label": "Total stress",
+                        "style": "envelope"
+                    }
+                    
+
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Concentric\ngrowth\ng",
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_g",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Concentric\ngrowth\nsignal",
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_c",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        }
+    ]
+}
