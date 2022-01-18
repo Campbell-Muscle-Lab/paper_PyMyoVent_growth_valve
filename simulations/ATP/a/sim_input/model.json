@@ -83,7 +83,7 @@
         "energetics":
         {
             "intracell_ATP_conc": 0.005,
-            "mitochondrial_rate_ATP_generation": 100000
+            "rate_ATP_generated": 1
         },
         "myofilaments":{
             "cb_number_density": 1.15e17,

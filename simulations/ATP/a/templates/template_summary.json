@@ -39,7 +39,7 @@
                     {
                         "field": "pressure_arteries",
                         "field_label": "Pressure",
-                        "style": "envelope"
+                        "style": "line"
                     },
                     {
                         "field": "baro_P_set",
@@ -58,7 +58,7 @@
                 [
                     {
                         "field": "pressure_ventricle",
-                        "style": "envelope"
+                        "style": "line"
                     }
                 ]
             }
@@ -72,7 +72,7 @@
                 [
                     {
                         "field": "volume_ventricle",
-                        "style": "envelope"
+                        "style": "line"
                     }
                 ]
             }
@@ -116,7 +116,7 @@
                 [
                     {
                         "field": "ventricle_wall_thickness",
-                        "style": "envelope"
+                        "style": "line"
                     }
                 ]
             }
@@ -159,21 +159,6 @@
                     {
                         "field": "pressure_veins",
                         "style": "line"
-                    }
-                ]
-            }
-        },
-        
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Myosin\nATPase",
-                "series":
-                [
-                    {
-                        "field": "myosin_ATPase",
-                        "style": "envelope"
                     }
                 ]
             }
@@ -248,7 +233,7 @@
                 "series":
                 [
                     {
-                        "field": "intracell_ATP_conc"
+                        "field": "ener_intracell_ATP_conc"
                     }
                 ]
             }
@@ -257,290 +242,19 @@
             "column": 2,
             "y_info":
             {
-                "label": "ATP rates",
+                "label": "ATP\nrates\n(M s$\\mathregular{^{-1}}$)",
                 "series":
                 [
                     {
-                        "field": "myosin_ATPase",
-                        "field_label": "myosin_ATPase"
+                        "field": "ener_flux_ATP_consumed",
+                        "field_label": "Consumed"
                     },
                     {
-                        "field": "mitochondrial_ATP_rate",
-                        "field_label": "mitochondrial_ATP_rate"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Ca",
-                "series":
-                [
-                    {
-                        "field": "Ca_cytosol",
-                        "scaling_factor": 1e6,
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Length",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "field": "hs_length",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Component\nStress",
-                "series":
-                [
-                    {
-                        "field": "cpt_cb_stress",
-                        "field_label": "CB stress",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "cpt_int_pas_stress",
-                        "field_label": "Int pas stress",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "cpt_ext_pas_stress",
-                        "field_label": "Ext pas stress",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Wall\nstress",
-                "series":
-                [
-                    {
-                        "field": "cb_stress",
-                        "field_label": "CB force",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "int_pas_stress",
-                        "field_label": "Int pas stress",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "ext_pas_stress",
-                        "field_label": "Ext pas stress",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Passive\nwall\nstress",
-                "series":
-                [
-                    {
-                        "field": "int_pas_stress",
-                        "field_label": "Int pas stress",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "ext_pas_stress",
-                        "field_label": "Ext pas stress",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Thin",
-                "series":
-                [
-                    {
-                        "field": "n_on",
-                        "field_label": "N_on",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "n_off",
-                        "field_label": "N_off",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Thin",
-                "series":
-                [
-                    {
-                        "field": "n_bound",
-                        "field_label": "N_bound",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "n_overlap",
-                        "field_label": "N_overlap",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Thick",
-                "series":
-                [
-                    {
-                        "field": "M_SRX",
-                        "field_label": "SRX",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "M_DRX",
-                        "field_label": "DRX",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "M_FG",
-                        "field_label": "FG",
-                        "style": "envelope"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Growth",
-                "series":
-                [
-                    {
-                        "field": "growth_active"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Component\nPassive\nStress",
-                "series":
-                [
-                    {
-                        "field": "cpt_int_pas_stress",
-                        "field_label": "Int pas stress",
-                        "style": "envelope"
-                    },
-                    {
-                        "field": "gr_eccentric_set",
-                        "field_label": "Ecc setpoint"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Eccentric\ngrowth\ng",
-                "series":
-                [
-                    {
-                        "field": "growth_eccentric_g",
-                        "style": "line"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Eccentric\ngrowth\nc",
-                "series":
-                [
-                    {
-                        "field": "growth_eccentric_c",
-                        "style": "line"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Component\nTotal\nStress",
-                "series":
-                [
-                    {
-                        "field": "cpt_myofil_stress",
-                        "field_label": "Total stress",
-                        "style": "envelope"
-                    }
-                    
-
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Concentric\ngrowth\ng",
-                "series":
-                [
-                    {
-                        "field": "growth_concentric_g",
-                        "style": "line"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 4,
-            "y_info":
-            {
-                "label": "Concentric\ngrowth\nsignal",
-                "series":
-                [
-                    {
-                        "field": "growth_concentric_c",
-                        "style": "envelope"
+                        "field": "ener_flux_ATP_generated",
+                        "field_label": "Generated"
                     }
                 ]
             }
         }
-    ]
+       ]
 }
