@@ -76,14 +76,19 @@
             "k_act": 8.2e-2,
             "k_serca": 8,
             "t_open": 0.01,
-            "implementation":{
+            "implementation":
+            {
                 "kinetic_scheme": "simple_2_compartment"
             }
         },
         "energetics":
         {
             "intracell_ATP_conc": 0.005,
-            "rate_ATP_generated": 1
+            "rate_ATP_generated": 1,
+            "implementation":
+            {
+                "kinetic_scheme": "simple_2_compartment"
+            }
         },
         "myofilaments":{
             "cb_number_density": 1.15e17,
