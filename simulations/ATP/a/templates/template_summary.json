@@ -53,6 +53,20 @@
             "column": 1,
             "y_info":
             {
+                "label": "MAP\n(mm Hg)",
+                "series":
+                [
+                    {
+                        "field": "mean_arterial_pressure",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
                 "label": "Ventricular\npressure\n(mm Hg)",
                 "series":
                 [
@@ -72,36 +86,6 @@
                 [
                     {
                         "field": "volume_ventricle",
-                        "style": "line"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 1,
-            "y_info":
-            {
-                "label": "n_hs",
-                "scaling_type": "close_fit",
-                "series":
-                [
-                    {
-                        "field": "n_hs",
-                        "style": "line"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 1,
-            "scaling_type": "close_fit",
-            "y_info":
-            {
-                "label": "Wall\nvolume\n(liters)",
-                "series":
-                [
-                    {
-                        "field": "ventricle_wall_volume",
                         "style": "line"
                     }
                 ]
@@ -181,14 +165,24 @@
             "column": 2,
             "y_info":
             {
-                "label": "Baroreceptor",
+                "label": "Baroreceptor\nafferent",
                 "series":
                 [
                     {
                         "field": "baro_B_a",
                         "field_label": "baro B_a",
                         "style": "line"
-                    },
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Baroreceptor\nbalance",
+                "series":
+                [
                     {
                         "field": "baro_B_b",
                         "field_label": "baro B_b",
@@ -255,6 +249,114 @@
                     }
                 ]
             }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Gr_conc_g",
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_g"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Gr_conc_c",
+                "series":
+                [
+                    {
+                        "field": "growth_concentric_c"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Growth\ndm",
+                "series":
+                [
+                    {
+                        "field": "growth_dm"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "scaling_type": "close_fit",
+            "y_info":
+            {
+                "label": "Wall\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Gr_ecc_g",
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_g"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Gr_ecc_c",
+                "series":
+                [
+                    {
+                        "field": "growth_eccentric_c"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Growth\ndn_hs",
+                "series":
+                [
+                    {
+                        "field": "growth_dn"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "n_hs",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "n_hs",
+                        "style": "line"
+                    }
+                ]
+            }
         }
-       ]
+    ]
 }

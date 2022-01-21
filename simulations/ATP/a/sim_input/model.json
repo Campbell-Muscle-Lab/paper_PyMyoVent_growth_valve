@@ -84,7 +84,7 @@
         "energetics":
         {
             "intracell_ATP_conc": 0.005,
-            "rate_ATP_generated": 1,
+            "rate_ATP_generated": 1.0266,
             "implementation":
             {
                 "kinetic_scheme": "simple_2_compartment"
@@ -144,7 +144,7 @@
                 {
                     "level": "heart_rate",
                     "variable": "t_quiescent_period",
-                    "k_control": 0.03,
+                    "k_control": 0.25,
                     "k_recov": 0.1,
                     "para_factor": 1.753497,
                     "symp_factor": 0.386
@@ -152,58 +152,50 @@
                 {
                     "level": "membranes",
                     "variable": "k_act",
-                    "k_control": 0.03,
+                    "k_control": 0.25,
                     "k_recov": 0.1,
-                    "para_factor": 0.333,
-                    "symp_factor": 3.0
+                    "para_factor": 0.5,
+                    "symp_factor": 2.0
                 },
                 {
                     "level": "membranes",
                     "variable": "k_serca",
-                    "k_control": 0.03,
+                    "k_control": 0.025,
                     "k_recov": 0.1,
-                    "para_factor": 0.333,
-                    "symp_factor": 3
+                    "para_factor": 0.5,
+                    "symp_factor": 2
                 },
                 {
                     "level": "myofilaments",
                     "variable": "k_1",
-                    "k_control": 0.03,
+                    "k_control": 0.025,
                     "k_recov": 0.1,
-                    "para_factor": 0.333,
-                    "symp_factor": 3
-                },
-                {
-                    "level": "myofilaments",
-                    "variable": "k_3",
-                    "k_control": 0.03,
-                    "k_recov": 0.1,
-                    "para_factor": 0.333,
-                    "symp_factor": 3
+                    "para_factor": 0.5,
+                    "symp_factor": 2
                 },
                 {
                     "level": "myofilaments",
                     "variable": "k_on",
-                    "k_control": 0.03,
+                    "k_control": 0.025,
                     "k_recov": 0.1,
-                    "para_factor": 3,
-                    "symp_factor": 0.333
+                    "para_factor": 2,
+                    "symp_factor": 0.5
                 },
                 {
                     "level": "circulation",
                     "variable": "arterioles_resistance",
-                    "k_control": 0.03,
+                    "k_control": 0.025,
                     "k_recov": 0.1,
-                    "para_factor": 0.333,
-                    "symp_factor": 3
+                    "para_factor": 0.5,
+                    "symp_factor": 2
                 },
                 {
                     "level": "circulation",
                     "variable": "veins_compliance",
-                    "k_control": 0.03,
+                    "k_control": 0.025,
                     "k_recov": 0.1,
-                    "para_factor": 3,
-                    "symp_factor": 0.333
+                    "para_factor": 4,
+                    "symp_factor": 0.25
                 }
             ]
         }
@@ -216,7 +208,7 @@
                 "type": "eccentric",
                 "level": "half_sarcomere",
                 "signal": "cpt_int_pas_stress",
-                "setpoint": 434.75,
+                "setpoint": 812,
                 "k_drive": 0.2,
                 "k_recov": 0.1,
                 "growth_factor": 5e-3,
@@ -224,13 +216,13 @@
             },
             {
                 "type": "concentric",
-                "level": "circulation",
-                "signal": "ATPase_to_myo",
-                "setpoint": 47769.93,
+                "level": "energetics",
+                "signal": "ener_intracell_ATP_conc",
+                "setpoint": 0.004345,
                 "k_drive": 0.2,
                 "k_recov": 0.1,
-                "growth_factor": 10e-3,
-                "antigrowth_factor": -10e-3
+                "growth_factor": -1e-3,
+                "antigrowth_factor": 1e-3
             }
         ]
     }
