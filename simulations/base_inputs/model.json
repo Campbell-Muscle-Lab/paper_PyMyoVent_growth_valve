@@ -73,6 +73,15 @@
                 "kinetic_scheme": "simple_2_compartment"
             }
         },
+        "energetics":
+        {
+            "intracell_ATP_conc": 0.005,
+            "rate_ATP_generated": 1.0266,
+            "implementation":
+            {
+                "kinetic_scheme": "simple_2_compartment"
+            }
+        },
         "myofilaments":{
             "cb_number_density": 1.15e17,
             "prop_fibrosis": 0.0,

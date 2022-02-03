@@ -215,18 +215,20 @@
                 "setpoint": 434.75,
                 "k_drive": 0.2,
                 "k_recov": 0.1,
-                "growth_factor": 5e-3,
-                "antigrowth_factor": -5e-3
+                "growth_factor": 0e-3,
+                "antigrowth_factor": -0e-3,
+                "xgrowth_factor": 5e-3,
+                "xantigrowth_factor": -5e-3
             },
             {
                 "type": "concentric",
-                "level": "circulation",
-                "signal": "ener_ATPase_to_myo",
-                "setpoint": 47769.93,
+                "level": "energetics",
+                "signal": "ener_intracell_ATP_conc",
+                "setpoint": 0.005,
                 "k_drive": 0.2,
                 "k_recov": 0.1,
-                "growth_factor": 10e-3,
-                "antigrowth_factor": -10e-3
+                "growth_factor": -5e-3,
+                "antigrowth_factor": 5e-3
             }
         ]
     }
