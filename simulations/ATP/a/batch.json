@@ -9,7 +9,7 @@
                 "model_file_string": "sim_input/model_eccentric_only.json",
                 "sim_options_file_string": "sim_input/options.json",
                 "output_handler_file_string": "sim_input/output_handler.json",
-                "sim_results_file_string": "sim_output/sim_data_1.csv"
+                "sim_results_file_string": "sim_output/sim_data_1.txt"
             }
         ]
     }

@@ -7,8 +7,12 @@
     },
     "xburst_output":
     {
-        "complete_span_s": 2,
+        "complete_span_s": 5,
         "complete_repeat_s": 20,
-        "envelope_span_s": 2
+        "envelope_span_s": 4
+    },
+    "periodic_save":
+    {
+        "save_interval_s": 10
     }
 }

@@ -171,7 +171,8 @@
                     {
                         "field": "baro_B_a",
                         "field_label": "baro B_a",
-                        "style": "line"
+                        "style": "line",
+                        "reference": 0.5
                     }
                 ]
             }
@@ -186,7 +187,8 @@
                     {
                         "field": "baro_B_b",
                         "field_label": "baro B_b",
-                        "style": "line"
+                        "style": "line",
+                        "reference": 0.5
                     }
                 ]
             }
@@ -196,6 +198,7 @@
             "y_info":
             {
                 "label": "HR rc",
+                "scaling_type": "close_fit",
                 "series":
                 [
                     {
@@ -256,11 +259,38 @@
             "column": 3,
             "y_info":
             {
-                "label": "Gr_conc_g",
+                "label": "Growth\nactive",
                 "series":
                 [
                     {
-                        "field": "growth_concentric_g",
+                        "field": "growth_active"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "cpt_int\npas_stress",
+                "series":
+                [
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "reference": 500
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ecc_G_a",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_a",
                         "reference": 0.5
                     }
                 ]
@@ -270,55 +300,12 @@
             "column": 3,
             "y_info":
             {
-                "label": "Gr_conc_c",
+                "label": "ecc_G_b",
+                "scaling_type": "close_fit",
                 "series":
                 [
                     {
-                        "field": "growth_concentric_c",
-                        "reference": 0.0
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Growth\ndm",
-                "series":
-                [
-                    {
-                        "field": "growth_dm",
-                        "reference": "initial"
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "scaling_type": "close_fit",
-            "y_info":
-            {
-                "label": "Wall\nvolume\n(liters)",
-                "series":
-                [
-                    {
-                        "field": "ventricle_wall_volume",
-                        "style": "line",
-                        "reference": 0.1
-                    }
-                ]
-            }
-        },
-        {
-            "column": 3,
-            "y_info":
-            {
-                "label": "Gr_ecc_g",
-                "series":
-                [
-                    {
-                        "field": "growth_eccentric_g",
+                        "field": "growth_ecc_G_b",
                         "reference": 0.5
                     }
                 ]
@@ -328,11 +315,12 @@
             "column": 3,
             "y_info":
             {
-                "label": "Gr_ecc_c",
+                "label": "ecc_G_c",
+                "scaling_type": "close_fit",
                 "series":
                 [
                     {
-                        "field": "growth_eccentric_c",
+                        "field": "growth_ecc_G_c",
                         "reference": 0.0
                     }
                 ]
@@ -342,12 +330,27 @@
             "column": 3,
             "y_info":
             {
-                "label": "Growth\ndn_hs",
+                "label": "ecc_G_result",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_result",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Growth\ndn",
                 "series":
                 [
                     {
                         "field": "growth_dn",
-                        "reference": 0.0
+                        "reference": "initial"
                     }
                 ]
             }
@@ -362,9 +365,118 @@
                 [
                     {
                         "field": "n_hs",
-                        "style": "line",
                         "reference": "initial"
-
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Growth\nactive",
+                "series":
+                [
+                    {
+                        "field": "growth_active"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "[ATP]",
+                "series":
+                [
+                    {
+                        "field": "ener_intracell_ATP_conc",
+                        "reference": 0.5
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_a",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_a",
+                        "reference": 0.5
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_b",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_b",
+                        "reference": 0.5
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_c",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_c",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_result",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_result",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Growth\ndm",
+                "series":
+                [
+                    {
+                        "field": "growth_dm",
+                        "reference": "initial"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Wall\nvolume",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume",
+                        "reference": "initial"
                     }
                 ]
             }
