@@ -5,7 +5,7 @@
         "t_start_s": 8.5,
         "t_stop_s": 10
     },
-    "xburst_output":
+    "burst_output":
     {
         "complete_span_s": 5,
         "complete_repeat_s": 20,

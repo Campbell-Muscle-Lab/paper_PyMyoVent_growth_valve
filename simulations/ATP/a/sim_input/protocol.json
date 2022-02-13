@@ -1,6 +1,6 @@
 {
     "protocol": {
-        "no_of_time_steps": 80000,
+        "no_of_time_steps": 800000,
         "time_step": 0.0005
     },
     "baroreflex": {
@@ -33,9 +33,9 @@
             {
                 "level": "circulation",
                 "variable": "n_hs",
-                "t_start_s": 20,
-                "t_stop_s": 21,
-                "total_change": 1000
+                "t_start_s": 200,
+                "t_stop_s": 210,
+                "total_change": 2000
             }
         ]
     }

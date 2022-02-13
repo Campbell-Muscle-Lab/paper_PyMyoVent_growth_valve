@@ -1,0 +1,10 @@
+{
+    "templated_images":
+    [
+        {
+            "relative_path": true,
+            "template_file_string": "../templates/template_summary.json",
+            "output_file_string": "../sim_output/sim_data_2.png"
+        }
+    ]
+}

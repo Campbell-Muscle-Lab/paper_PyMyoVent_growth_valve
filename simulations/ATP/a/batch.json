@@ -5,11 +5,19 @@
         [
             {
                 "relative_path": true,
-                "protocol_file_string": "sim_input/protocol.json",
+                "protocol_file_string": "sim_input/protocol_1.json",
                 "model_file_string": "sim_input/model_eccentric_only.json",
                 "sim_options_file_string": "sim_input/options.json",
-                "output_handler_file_string": "sim_input/output_handler.json",
+                "output_handler_file_string": "sim_input/output_handler_1.json",
                 "sim_results_file_string": "sim_output/sim_data_1.txt"
+            },
+            {
+                "relative_path": true,
+                "protocol_file_string": "sim_input/protocol_2.json",
+                "model_file_string": "sim_input/model_eccentric_only.json",
+                "sim_options_file_string": "sim_input/options.json",
+                "output_handler_file_string": "sim_input/output_handler_2.json",
+                "sim_results_file_string": "sim_output/sim_data_2.txt"
             }
         ]
     }
