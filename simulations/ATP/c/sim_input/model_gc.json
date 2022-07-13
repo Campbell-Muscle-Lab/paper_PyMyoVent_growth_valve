@@ -200,11 +200,11 @@
                 "type": "eccentric",
                 "level": "half_sarcomere",
                 "signal": "cpt_int_pas_stress",
-                "rel_S": 0.1,
+                "rel_S": 0.4,
                 "setpoint": 774,
-                "buffer_time_s": 10,
-                "deriv_gain": 10,
-                "growth_factor": 5e-2
+                "buffer_time_s": 2,
+                "deriv_gain": 20,
+                "growth_factor": 5e-3
             },
             {
                 "type": "concentric",
@@ -212,7 +212,7 @@
                 "signal": "ener_intracell_ATP_conc",
                 "rel_S": 5,
                 "setpoint": 0.007,
-                "buffer_time_s": 5,
+                "buffer_time_s": 2,
                 "deriv_gain": 20,
                 "growth_factor": -5e-2
             }
