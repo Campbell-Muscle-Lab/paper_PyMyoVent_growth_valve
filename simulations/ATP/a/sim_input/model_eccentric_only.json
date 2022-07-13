@@ -215,14 +215,14 @@
                 "rel_S": 0.1,
                 "setpoint": 450,
                 "xsetpoint": 434.75,
-                "g_B_k_drive": 0.1,
+                "g_B_k_drive": 1,
                 "g_B_k_recov": 0.1,
                 "g_C_k_drive": 0.1,
                 "g_C_k_recov": 0.1,
                 "growth_factor": 0.05,
                 "antigrowth_factor": -0.05,
-                "xgrowth_factor": 1e-3,
-                "xantigrowth_factor": -1e-3
+                "xgrowth_factor": 5e-3,
+                "xantigrowth_factor": -5e-3
             },
             {
                 "type": "concentric",

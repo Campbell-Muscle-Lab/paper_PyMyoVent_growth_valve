@@ -11,7 +11,8 @@
     },
     "x_display":{
         "global_x_field": "time",
-        "label": "Time (s)"
+        "label": "Time (s)",
+        "ticks": [0,200]
     },
     "processing":{
         "envelope_rel_width": 0.02

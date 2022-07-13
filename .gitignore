@@ -1,6 +1,4 @@
-*.csv
-simulations/simulation*
-references
-simulations/ATP/**/*.txt
+simulations/**/*.csv
+simulations/**/*.txt
 
 

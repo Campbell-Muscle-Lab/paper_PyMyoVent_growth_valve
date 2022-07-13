@@ -1,0 +1,42 @@
+{
+    "protocol": {
+        "no_of_time_steps": 1000000,
+        "time_step": 0.0005
+    },
+    "baroreflex": {
+        "activations": [
+            {
+                "t_start_s": 5,
+                "t_stop_s": 10000
+            }
+        ]
+    },
+    "growth":
+    {
+        "activations":
+        [
+            {
+                "t_start_s": 25,
+                "t_stop_s": 10000
+            }
+        ]
+    },
+    "perturbation": {
+        "perturbations": [
+            {
+                "level": "circulation",
+                "variable": "ventricle_wall_volume",
+                "t_start_s": 700,
+                "t_stop_s": 710,
+                "total_change": 0.01
+            },
+            {
+                "level": "circulation",
+                "variable": "n_hs",
+                "t_start_s": 200,
+                "t_stop_s": 210,
+                "total_change": 2000
+            }
+        ]
+    }
+}
