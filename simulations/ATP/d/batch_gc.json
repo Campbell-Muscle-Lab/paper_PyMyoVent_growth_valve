@@ -1,0 +1,40 @@
+{
+    "PyMyoVent_batch":
+    {
+        "job":
+        [
+            {
+                "relative_to": "this_file",
+                "protocol_file_string": "sim_input/protocol_g.json",
+                "model_file_string": "sim_input/model_gc.json",
+                "sim_options_file_string": "sim_input/options.json",
+                "output_handler_file_string": "sim_input/output_handler_gc.json",
+                "sim_results_file_string": "sim_output/sim_data_gc.txt"
+            },
+            {
+                "relative_to": "this_file",
+                "protocol_file_string": "sim_input/protocol_g.json",
+                "model_file_string": "sim_input/model_gc_no_shrink.json",
+                "sim_options_file_string": "sim_input/options.json",
+                "output_handler_file_string": "sim_input/output_handler_gc_no_shrink.json",
+                "sim_results_file_string": "sim_output/sim_data_gc_no_shrink.txt"
+            },
+            {
+                "relative_to": "this_file",
+                "protocol_file_string": "sim_input/protocol_g.json",
+                "model_file_string": "sim_input/model_gc_no_growth.json",
+                "sim_options_file_string": "sim_input/options.json",
+                "output_handler_file_string": "sim_input/output_handler_gc_no_growth.json",
+                "sim_results_file_string": "sim_output/sim_data_gc_no_growth.txt"
+            },
+            {
+                "relative_to": "this_file",
+                "protocol_file_string": "sim_input/protocol_g.json",
+                "model_file_string": "sim_input/model_gc_no_shrink_no_growth.json",
+                "sim_options_file_string": "sim_input/options.json",
+                "output_handler_file_string": "sim_input/output_handler_gc_no_shrink_no_growth.json",
+                "sim_results_file_string": "sim_output/sim_data_gc_no_shrink_no_growth.txt"
+            }
+        ]
+    }
+}

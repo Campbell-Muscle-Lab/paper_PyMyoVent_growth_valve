@@ -1,0 +1,11 @@
+{
+    "templated_images":
+    [
+        {
+            "relative_to": "this_file",
+            "template_file_string": "../templates/template_summary_g.json",
+            "output_image_file": "../sim_output/sim_data_gc_no_growth",
+            "output_image_formats": ["png", "svg"]
+        }
+    ]
+}
