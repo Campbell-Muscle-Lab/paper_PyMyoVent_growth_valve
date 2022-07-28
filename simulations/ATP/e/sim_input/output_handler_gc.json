@@ -1,0 +1,26 @@
+{
+    "xtemplated_images":
+    [
+        {
+            "relative_to": "this_file",
+            "template_file_string": "../templates/template_single_beat.json",
+            "output_image_file": "../sim_output/single_beat",
+            "output_image_formats": ["png", "svg"]
+        }
+    ],
+    "templated_images":
+    [
+        {
+            "relative_to": "this_file",
+            "template_file_string": "../templates/template_summary_g.json",
+            "output_image_file": "../sim_output/sim_data_gc",
+            "output_image_formats": ["png", "svg"]
+        },
+        {
+            "relative_to": "this_file",
+            "template_file_string": "../templates/template_single_beat.json",
+            "output_image_file": "../sim_output/single_beat",
+            "output_image_formats": ["png", "svg"]
+        }
+    ]
+}
