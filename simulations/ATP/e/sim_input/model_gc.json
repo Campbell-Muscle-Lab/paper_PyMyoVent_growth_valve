@@ -76,7 +76,7 @@
         "energetics":
         {
             "intracell_ATP_conc": 0.007,
-            "rate_ATP_generated": 2,
+            "rate_ATP_generated": 1.5,
             "implementation":
             {
                 "kinetic_scheme": "mito_myo_SERCA"
