@@ -1,7 +1,7 @@
 {
     "PyMyoVent_batch":
     {
-        "job":
+        "xjob":
         [
             {
                 "relative_to": "this_file",
@@ -20,15 +20,15 @@
                 "sim_results_file_string": "sim_output/sim_data_gc_destab.txt"
             }
         ],
-        "xjob":
+        "job":
         [
             {
                 "relative_to": "this_file",
-                "protocol_file_string": "sim_input/protocol_g.json",
+                "protocol_file_string": "sim_input/protocol_g_destab.json",
                 "model_file_string": "sim_input/model_gc.json",
                 "sim_options_file_string": "sim_input/options.json",
-                "output_handler_file_string": "sim_input/output_handler_gc.json",
-                "sim_results_file_string": "sim_output/sim_data_gc.txt"
+                "output_handler_file_string": "sim_input/output_handler_gc_destab.json",
+                "sim_results_file_string": "sim_output/sim_data_gc_destab.txt"
             }
         ]
     }

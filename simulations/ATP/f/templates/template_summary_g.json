@@ -1,0 +1,768 @@
+{
+    "layout":
+    {
+        "fig_width": 14,
+        "top_margin": 0.3,
+        "left_margin": 0.5,
+        "right_margin": 0,
+        "panel_height": 1,
+        "grid_wspace": 0.75,
+        "grid_hspace": 1
+    },
+    "x_display":{
+        "global_x_field": "time",
+        "label": "Time (s)",
+        "ticks": [0, 400]
+    },
+    "processing":{
+        "envelope_rel_width": 0.01
+    },
+    "formatting":
+    {
+        "x_label_fontsize": 10,
+        "y_label_fontsize": 10,
+        "tick_fontsize": 7,
+        "legend_fontsize": 6,
+        "label_fontsize": 3,
+        "y_label_offset": -0.23,
+        "bbox_to_anchor": [1.3, 1],
+        "patch_alpha": 0.3
+    },
+    "annotations":
+    [
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 20,
+            "line_style": "k:",
+            "linewidth": 1
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 60,
+            "line_style": "k:",
+            "linewidth": 1
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 180,
+            "line_style": "k:",
+            "linewidth": 1
+        },
+        {
+            "panel": "all",
+            "type": "v_line",
+            "x_value": 300,
+            "line_style": "k:",
+            "linewidth": 1
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "text",
+            "x_coord": 180,
+            "y_rel_coord": 1.3,
+            "label": "$\\Delta V\\mathregular{_{wall}}$",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "text",
+            "x_coord": 300,
+            "y_rel_coord": 1.3,
+            "label": "$\\Delta n\\mathregular{_{hs}}$",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "text",
+            "x_coord": -48,
+            "y_rel_coord": 1.9,
+            "label": "Growth",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "box",
+            "x_coords": [0, 60],
+            "y_rel_coords": [1.7, 2.1],
+            "label": "Off",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "box",
+            "x_coords": [60, 400],
+            "y_rel_coords": [1.7, 2.1],
+            "label": "On",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "text",
+            "x_coord": -48,
+            "y_rel_coord": 2.7,
+            "label": "Baroreflex",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "box",
+            "x_coords": [0, 20],
+            "y_rel_coords": [2.5, 2.9],
+            "label": "Off",
+            "label_fontsize": 9
+        },
+        {
+            "panel": [0, 10, 20, 29],
+            "type": "box",
+            "x_coords": [20, 400],
+            "y_rel_coords": [2.5, 2.9],
+            "label": "On",
+            "label_fontsize": 9
+        }
+    ],
+    "panels":
+    [
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Arterial\npressure\n(mmHg)",
+                "legend_bbox_to_anchor": [1, 0],
+                "legend_location": "lower right",
+                "legend_borderaxespad": 0,
+                "series":
+                [
+                    {
+                        "field": "pressure_arteries",
+                        "field_label": "Pressure",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "baro_P_set",
+                        "field_label": "Setpoint",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "MAP\n(mmHg)",
+                "series":
+                [
+                    {
+                        "field": "mean_arterial_pressure",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\npressure\n(mmHg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_ventricle",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ventricular\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "volume_ventricle",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Wall\nthickness\n(m)",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_thickness",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Stroke\nvolume\n(liters)",
+                "series":
+                [
+                    {
+                        "field": "stroke_volume",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Ejection\nfraction",
+                "series":
+                [
+                    {
+                        "field": "ejection_fraction"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Venous\npressure\n(mmHg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_veins",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Energy\n(J)",
+                "series":
+                [
+                    {
+                        "field": "stroke_work",
+                        "field_label": "Stroke work"
+                    },
+                    {
+                        "field": "stroke_cost",
+                        "field_label": "Stroke cost"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Efficiency",
+                "series":
+                [
+                    {
+                        "field": "efficiency"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Baroreceptor\nactive",
+                "series":
+                [
+                    {
+                        "field": "baro_active",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Baroreceptor\nafferent",
+                "series":
+                [
+                    {
+                        "field": "baro_B_a",
+                        "style": "envelope",
+                        "reference": 0.5
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Baroreceptor\nbalance",
+                "series":
+                [
+                    {
+                        "field": "baro_B_b",
+                        "style": "envelope",
+                        "reference": 0.5
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "HR rc",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "baro_B_c_heart_rate_t_quiescent_period",
+                        "style": "line"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Heart\nrate\n(BPM)",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "heart_rate"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "ATPase\n(M s$\\mathregular{^{-1}}$)",
+                "legend_bbox_to_anchor": [1, 0],
+                "legend_location": "lower right",
+                "legend_borderaxespad": 0,
+                "series":
+                [
+                    {
+                        "field": "ener_flux_myo_ATP_consumed",
+                        "field_label": "Myo",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "ener_flux_myo_ATP_consumed",
+                        "field_label": "Myo",
+                        "moving_average": 4000,
+                        "style": "line"
+
+                    },
+                    {
+                        "field": "ener_flux_SERCA_ATP_consumed",
+                        "field_label": "SERCA",
+                        "style": "envelope"
+                    },
+                    {
+                        "field": "ener_flux_SERCA_ATP_consumed",
+                        "field_label": "SERCA",
+                        "moving_average": 4000,
+                        "style": "line"
+
+                    },
+                    {
+                        "field": "ener_flux_ATP_generated",
+                        "field_label": "Gen",
+                        "field_color": 2,
+                        "reference": 0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "M states",
+                "legend_bbox_to_anchor": [1, 0],
+                "legend_location": "lower right",
+                "legend_borderaxespad": 0,
+                "series":
+                [
+                    {
+                        "field": "M_SRX",
+                        "style": "envelope",
+                        "field_label": "SRX"
+                    },
+                    {
+                        "field": "M_DRX",
+                        "style": "envelope",
+                        "field_label": "DRX"
+                    },
+                    {
+                        "field": "M_PRE",
+                        "style": "envelope",
+                        "field_label": "PRE"
+                    },
+                    {
+                        "field": "M_POST",
+                        "style": "envelope",
+                        "field_label": "POST"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Half-\nsarcomere\nlength",
+                "series":
+                [
+                    {
+                        "field": "hs_length",
+                        "style": "envelope"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "Total\nATP\nconsumed\n(M s${^{-1}}$)",
+                "series":
+                [
+                    {
+                        "field": "G_shrink",
+                        "style": "line",
+                        "moving_average": 3000,
+                        "reference": 0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info":
+            {
+                "label": "G_shrink_result",
+                "series":
+                [
+                    {
+                        "field": "G_shrink_result",
+                        "style": "line",
+                        "reference": 0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Growth\nactive",
+                "series":
+                [
+                    {
+                        "field": "growth_active"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "cpt_int\npas_stress",
+                "legend_bbox_to_anchor": [1, 0],
+                "legend_location": "lower right",
+                "legend_borderaxespad": 0,
+                "series":
+                [
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "style": "envelope",
+                        "field_label": "Pas stress"
+                    },
+                    {
+                        "field": "cpt_int_pas_stress",
+                        "field_label": "Mean stress",
+                        "style": "line",
+                        "moving_average": 5000,
+                        "reference": 774                       
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ecc_G_prop",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_prop",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ecc_G_deriv",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_deriv",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ecc_G_energy",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_energy",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ecc_G_total",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_total",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "ecc_G_result",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "growth_ecc_G_result",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "Growth &\nShrink dn",
+                "legend_bbox_to_anchor": [1, 0],
+                "legend_location": "lower right",
+                "legend_borderaxespad": 0,
+                "series":
+                [
+                    {
+                        "field": "growth_dn",
+                        "field_label": "Growth"
+                    },
+                    {
+                        "field": "shrink_dn",
+                        "field_label": "Shrink",
+                        "reference": 0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 3,
+            "y_info":
+            {
+                "label": "n_hs",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "n_hs",
+                        "style": "envelope",
+                        "reference": "initial"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Growth\nactive",
+                "series":
+                [
+                    {
+                        "field": "growth_active"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "[ATP]",
+                "series":
+                [
+                    {
+                        "field": "ener_intracell_ATP_conc",
+                        "reference": 0.007
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_prop",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_prop",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_deriv",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_deriv",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_energy",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_energy",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_total",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_total",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "con_G_result",
+                "series":
+                [
+                    {
+                        "field": "growth_con_G_result",
+                        "style": "envelope",
+                        "reference": 0.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Growth &\nShrink dm",
+                "legend_bbox_to_anchor": [1, 0],
+                "legend_location": "lower right",
+                "legend_borderaxespad": 0,
+                "series":
+                [
+                    {
+                        "field": "growth_dm",
+                        "field_label": "Growth"
+                    },
+                    {
+                        "field": "shrink_dm",
+                        "field_label": "Shrink",
+                        "reference": 0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 4,
+            "y_info":
+            {
+                "label": "Wall\nvolume",
+                "scaling_type": "close_fit",
+                "series":
+                [
+                    {
+                        "field": "ventricle_wall_volume",
+                        "reference": "initial"
+                    }
+                ]
+            }
+        }
+    ]
+}

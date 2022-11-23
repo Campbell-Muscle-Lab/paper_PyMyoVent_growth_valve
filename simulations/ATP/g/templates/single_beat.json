@@ -11,8 +11,7 @@
     },
     "x_display":{
         "global_x_field": "time",
-        "label": "Time (s)",
-        "ticks": [176, 184]
+        "label": "Time (s)"
     },
     "processing":{
         "envelope_rel_width": 0.005
@@ -23,7 +22,7 @@
         "y_label_fontsize": 9,
         "tick_fontsize": 9,
         "legend_fontsize": 7,
-        "y_label_offset": -0.7,
+        "y_label_offset": -0.3,
         "legend_bbox_to_anchor": [1.2, 1.0],
         "patch_alpha": 0.3,
         "grid_hspace": 0.5
@@ -74,6 +73,24 @@
                     {
                         "field": "pressure_veins",
                         "field_label": "Veins"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info":
+            {
+                "label": "Pressure\n(mmHg)",
+                "series":
+                [
+                    {
+                        "field": "pressure_veins",
+                        "field_label": "Veins"
+                    },
+                    {
+                        "field": "pressure_ventricle",
+                        "field_label": "Ventricles"
                     }
                 ]
             }

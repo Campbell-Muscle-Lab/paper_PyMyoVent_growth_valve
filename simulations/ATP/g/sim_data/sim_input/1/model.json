@@ -1,33 +1,35 @@
 {
-    "circulation":{
+    "PyMyoVent": {
+        "version": "2.1.0"
+    },
+    "circulation": {
         "blood_volume": 4.5,
-        "compartments":
-        [
+        "compartments": [
             {
                 "name": "aorta",
                 "resistance": 20,
-                "compliance": 4e-4,
+                "compliance": 0.0004,
                 "slack_volume": 0.3,
                 "inertance": 0
             },
             {
                 "name": "arteries",
                 "resistance": 20,
-                "compliance": 8e-4,
+                "compliance": 0.0008,
                 "slack_volume": 0.3,
                 "inertance": 0
             },
             {
                 "name": "arterioles",
                 "resistance": 800,
-                "compliance": 1e-3,
+                "compliance": 0.001,
                 "slack_volume": 0.1,
                 "inertance": 0
             },
             {
                 "name": "capillaries",
                 "resistance": 150,
-                "compliance": 1e-4,
+                "compliance": 0.0001,
                 "slack_volume": 0.25,
                 "inertance": 0
             },
@@ -40,14 +42,14 @@
             },
             {
                 "name": "veins",
-                "resistance": 20,
+                "resistance": 1,
                 "compliance": 0.08,
                 "slack_volume": 2.0,
                 "inertance": 0
             },
             {
                 "name": "ventricle",
-                "resistance": 5,
+                "resistance": 10,
                 "slack_volume": 0.065,
                 "wall_density": 1055,
                 "wall_volume": 0.1,
@@ -60,58 +62,55 @@
         "t_quiescent_period": 0.854,
         "t_first_activation": 0.1
     },
-    "half_sarcomere":{
+    "half_sarcomere": {
         "initial_hs_length": 900,
         "reference_hs_length": 1100,
         "membranes": {
-            "Ca_content": 1e-3,
-            "k_leak": 6e-4,
-            "k_act": 8.2e-2,
+            "Ca_content": 0.001,
+            "k_leak": 0.0006,
+            "k_act": 0.082,
             "k_serca": 8.0,
             "t_open": 0.01,
-            "implementation":{
+            "implementation": {
                 "kinetic_scheme": "simple_2_compartment"
             }
         },
-        "energetics":
-        {
+        "energetics": {
             "intracell_ATP_conc": 0.007,
             "rate_ATP_generated": 1.0,
-            "implementation":
-            {
+            "implementation": {
                 "kinetic_scheme": "mito_myo_SERCA"
             }
         },
-        "myofilaments":{
-            "cb_number_density": 1.15e17,
+        "myofilaments": {
+            "cb_number_density": 1.15e+17,
             "prop_fibrosis": 0.0,
             "prop_myofilaments": 0.6,
-            "k_1": 3,
-            "k_force": 1e-3,
-            "k_2": 200,
-            "k_3": 80,
-            "k_4_0": 100,
-            "k_4_1": 2,
-            "k_4_2": 1,
-            "k_4_3": 8,
-            "k_5": 100,
+            "k_1": 20,
+            "k_force": 0.0006,
+            "k_2": 600,
+            "k_3": 100,
+            "k_4_0": 200,
+            "k_4_1": 10,
+            "k_5": 1000,
             "k_6": 0,
-            "k_7_0": 100,
-            "k_7_1": 0.1,
+            "k_7_0": 40,
+            "k_7_1": 2,
+            "k_7_2": 10,
+            "k_7_3": 2,
             "k_8": 0,
             "k_cb": 0.001,
-            "x_ps": 8,
-            "k_on": 2e8,
+            "x_ps": 5,
+            "k_on": 200000000.0,
             "k_off": 200,
-            "k_coop": 5,
-            "int_passive_exp_sigma": 300,
-            "int_passive_exp_L": 70,
+            "k_coop": 20,
+            "int_passive_exp_sigma": 5,
+            "int_passive_exp_L": 30,
             "int_passive_l_slack": 950,
             "ext_passive_exp_sigma": 300,
             "ext_passive_exp_L": 70,
             "ext_passive_l_slack": 950,
-            "implementation":
-            {
+            "implementation": {
                 "kinetic_scheme": "4_state_with_SRX",
                 "int_passive_mode": "exponential",
                 "ext_passive_mode": "exponential",
@@ -130,16 +129,13 @@
             }
         }
     },
-    "baroreflex":
-    {
+    "baroreflex": {
         "baro_P_set": 90,
         "baro_S": 0.02,
         "baro_k_drive": 10,
         "baro_k_recov": 0.1,
-        "controls":
-        {
-            "control":
-            [
+        "controls": {
+            "control": [
                 {
                     "level": "heart_rate",
                     "variable": "t_quiescent_period",
@@ -199,16 +195,13 @@
             ]
         }
     },
-    "growth":
-    {
-        "shrinkage":
-        {
+    "growth": {
+        "shrinkage": {
             "signal": "ener_flux_total_ATP_consumed",
             "buffer_time_s": 2,
             "shrink_factor": 100
         },
-        "components":
-        [
+        "components": [
             {
                 "type": "eccentric",
                 "level": "half_sarcomere",
@@ -218,7 +211,7 @@
                 "buffer_time_s": 2,
                 "deriv_gain": 10,
                 "xgrowth_factor": 0,
-                "growth_factor": 5e-3,
+                "growth_factor": 0.005,
                 "energy_factor": 0
             },
             {
@@ -230,7 +223,7 @@
                 "buffer_time_s": 2,
                 "deriv_gain": 10,
                 "xgrowth_factor": 0,
-                "growth_factor": -5e-2,
+                "growth_factor": -0.05,
                 "energy_factor": 0
             }
         ]

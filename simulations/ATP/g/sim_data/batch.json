@@ -1,0 +1,14 @@
+{
+    "PyMyoVent_batch": {
+        "job": [
+            {
+                "relative_to": "this_file",
+                "protocol_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\g\\sim_data\\sim_input\\1\\protocol.json",
+                "model_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\g\\sim_data\\sim_input\\1\\model.json",
+                "sim_options_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\g\\sim_data\\sim_input\\1\\options.json",
+                "sim_results_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\g\\sim_data\\sim_output\\1\\sim_results.txt",
+                "output_handler_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\g\\sim_data\\sim_input\\1\\output_handler.json"
+            }
+        ]
+    }
+}

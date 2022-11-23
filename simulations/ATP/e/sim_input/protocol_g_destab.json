@@ -24,18 +24,11 @@
     "perturbation": {
         "perturbations": [
             {
-                "level": "circulation",
-                "variable": "ventricle_wall_volume",
+                "level": "myofilaments",
+                "variable": "k_2",
                 "t_start_s": 180,
                 "t_stop_s": 180.1,
-                "total_change": 0.03
-            },
-            {
-                "level": "circulation",
-                "variable": "n_hs",
-                "t_start_s": 300.0,
-                "t_stop_s": 300.1,
-                "total_change": 15000
+                "total_change": -50
             }
         ]
     }

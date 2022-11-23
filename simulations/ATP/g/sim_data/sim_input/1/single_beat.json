@@ -1,6 +1,5 @@
 {
-    "layout":
-    {
+    "layout": {
         "fig_width": 7,
         "top_margin": 0.0,
         "left_margin": 0.3,
@@ -9,34 +8,32 @@
         "grid_wspace": 0,
         "grid_hspace": 0.2
     },
-    "x_display":{
+    "x_display": {
         "global_x_field": "time",
-        "label": "Time (s)",
-        "ticks": [176, 184]
+        "label": "Time (s)"
     },
-    "processing":{
+    "processing": {
         "envelope_rel_width": 0.005
     },
-    "formatting":
-    {
+    "formatting": {
         "x_label_fontsize": 9,
         "y_label_fontsize": 9,
         "tick_fontsize": 9,
         "legend_fontsize": 7,
-        "y_label_offset": -0.7,
-        "legend_bbox_to_anchor": [1.2, 1.0],
+        "y_label_offset": -0.3,
+        "legend_bbox_to_anchor": [
+            1.2,
+            1.0
+        ],
         "patch_alpha": 0.3,
         "grid_hspace": 0.5
     },
-    "panels":
-    [
+    "panels": [
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Pressure\n(mmHg)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "pressure_ventricle",
                         "field_label": "Ventricle"
@@ -54,11 +51,9 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Pressure\n(mmHg)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "pressure_arterioles",
                         "field_label": "Arterioles"
@@ -80,11 +75,25 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
+                "label": "Pressure\n(mmHg)",
+                "series": [
+                    {
+                        "field": "pressure_veins",
+                        "field_label": "Veins"
+                    },
+                    {
+                        "field": "pressure_ventricle",
+                        "field_label": "Ventricles"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
                 "label": "Ventricular\nvolume\n(liters)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "volume_ventricle"
                     }
@@ -93,11 +102,9 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Activation",
-                "series":
-                [
+                "series": [
                     {
                         "field": "activation"
                     }
@@ -106,25 +113,21 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Ca$\\mathregular{_{myo}}$\n($\\mathregular{\\mu}$M)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "Ca_cytosol",
-                        "scaling_factor": 1e6
+                        "scaling_factor": 1000000.0
                     }
                 ]
             }
         },
         {
             "column": 2,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Ca$\\flux",
-                "series":
-                [
+                "series": [
                     {
                         "field": "J_release",
                         "scaling_factor": 1
@@ -138,11 +141,9 @@
         },
         {
             "column": 2,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Stroke\ncost\n(J)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "stroke_cost",
                         "scaling_factor": 1
@@ -152,11 +153,9 @@
         },
         {
             "column": 2,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Stroke\nwork\n(J)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "stroke_work",
                         "scaling_factor": 1
@@ -166,11 +165,9 @@
         },
         {
             "column": 2,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Efficiency",
-                "series":
-                [
+                "series": [
                     {
                         "field": "efficiency",
                         "scaling_factor": 1
@@ -180,12 +177,10 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Half-\nsarcomere\nlength\n(nm)",
                 "scaling_type": "close_fit",
-                "series":
-                [
+                "series": [
                     {
                         "field": "hs_length"
                     }
@@ -194,36 +189,32 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Wall\nstress\n(kN m$\\mathregular{^{-2}}$)",
-                "series":
-                [
+                "series": [
                     {
                         "field": "hs_stress",
                         "field_label": "Total",
-                        "scaling_factor": 1e-3
+                        "scaling_factor": 0.001
                     },
                     {
                         "field": "cb_stress",
                         "field_label": "Active",
-                        "scaling_factor": 1e-3
+                        "scaling_factor": 0.001
                     },
                     {
                         "field": "int_pas_stress",
                         "field_label": "Passive",
-                        "scaling_factor": 1e-3
+                        "scaling_factor": 0.001
                     }
                 ]
             }
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Thin\nfilament",
-                "series":
-                [
+                "series": [
                     {
                         "field": "n_off",
                         "field_label": "OFF"
@@ -237,11 +228,9 @@
         },
         {
             "column": 1,
-            "y_info":
-            {
+            "y_info": {
                 "label": "Thick\nfilament",
-                "series":
-                [
+                "series": [
                     {
                         "field": "M_SRX",
                         "field_label": "SRX"
