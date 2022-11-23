@@ -1,0 +1,33 @@
+{
+    "xcross_bridge_dump": {
+        "file_string": "../demo_files/3state_with_SRX_base/sim_output/cb_distribution_dump.txt",
+        "t_start_s": 8.5,
+        "t_stop_s": 10
+    },
+    "xburst_output": {
+        "complete_span_s": 5,
+        "complete_repeat_s": 20,
+        "envelope_span_s": 4
+    },
+    "periodic_save": {
+        "save_interval_s": 20
+    },
+    "rates_dump": {
+        "relative_to": "this_file",
+        "file_string": "../../sim_output/1/rates.txt",
+        "output_image_file": "../../sim_output/1/rates",
+        "output_image_formats": [
+            "png",
+            "svg"
+        ]
+    },
+    "pas_stress_dump": {
+        "relative_to": "this_file",
+        "file_string": "../../sim_output/1/pas_stress.txt",
+        "output_image_file": "../../sim_output/1/pas_stress",
+        "output_image_formats": [
+            "png",
+            "svg"
+        ]
+    }
+}

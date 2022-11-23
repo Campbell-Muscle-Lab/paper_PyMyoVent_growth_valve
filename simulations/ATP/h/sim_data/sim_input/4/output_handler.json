@@ -1,0 +1,22 @@
+{
+    "templated_images": [
+        {
+            "relative_to": "False",
+            "template_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\h\\sim_data\\sim_input\\4\\single_beat.json",
+            "output_image_file": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\h\\sim_data\\sim_output\\4\\single_beat",
+            "output_image_formats": [
+                "png",
+                "svg"
+            ]
+        },
+        {
+            "relative_to": "False",
+            "template_file_string": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\h\\sim_data\\sim_input\\4\\summary.json",
+            "output_image_file": "C:\\ken\\GitHub\\CampbellMuscleLab\\Publications\\paper_PyMyoVent_growth_valve\\simulations\\ATP\\h\\sim_data\\sim_output\\4\\summary",
+            "output_image_formats": [
+                "png",
+                "svg"
+            ]
+        }
+    ]
+}

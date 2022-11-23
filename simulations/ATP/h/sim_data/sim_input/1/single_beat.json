@@ -1,0 +1,254 @@
+{
+    "layout": {
+        "fig_width": 7,
+        "top_margin": 0.0,
+        "left_margin": 0.3,
+        "right_margin": 0.3,
+        "panel_height": 0.75,
+        "grid_wspace": 0,
+        "grid_hspace": 0.2
+    },
+    "x_display": {
+        "global_x_field": "time",
+        "label": "Time (s)"
+    },
+    "processing": {
+        "envelope_rel_width": 0.005
+    },
+    "formatting": {
+        "x_label_fontsize": 9,
+        "y_label_fontsize": 9,
+        "tick_fontsize": 9,
+        "legend_fontsize": 7,
+        "y_label_offset": -0.3,
+        "legend_bbox_to_anchor": [
+            1.2,
+            1.0
+        ],
+        "patch_alpha": 0.3,
+        "grid_hspace": 0.5
+    },
+    "panels": [
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Pressure\n(mmHg)",
+                "series": [
+                    {
+                        "field": "pressure_ventricle",
+                        "field_label": "Ventricle"
+                    },
+                    {
+                        "field": "pressure_aorta",
+                        "field_label": "Aorta"
+                    },
+                    {
+                        "field": "pressure_arteries",
+                        "field_label": "Arteries"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Pressure\n(mmHg)",
+                "series": [
+                    {
+                        "field": "pressure_arterioles",
+                        "field_label": "Arterioles"
+                    },
+                    {
+                        "field": "pressure_capillaries",
+                        "field_label": "Capillaries"
+                    },
+                    {
+                        "field": "pressure_venules",
+                        "field_label": "Venules"
+                    },
+                    {
+                        "field": "pressure_veins",
+                        "field_label": "Veins"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Pressure\n(mmHg)",
+                "series": [
+                    {
+                        "field": "pressure_veins",
+                        "field_label": "Veins"
+                    },
+                    {
+                        "field": "pressure_ventricle",
+                        "field_label": "Ventricles"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Ventricular\nvolume\n(liters)",
+                "series": [
+                    {
+                        "field": "volume_ventricle"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Activation",
+                "series": [
+                    {
+                        "field": "activation"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Ca$\\mathregular{_{myo}}$\n($\\mathregular{\\mu}$M)",
+                "series": [
+                    {
+                        "field": "Ca_cytosol",
+                        "scaling_factor": 1000000.0
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info": {
+                "label": "Ca$\\flux",
+                "series": [
+                    {
+                        "field": "J_release",
+                        "scaling_factor": 1
+                    },
+                    {
+                        "field": "J_uptake",
+                        "scaling_factor": 1
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info": {
+                "label": "Stroke\ncost\n(J)",
+                "series": [
+                    {
+                        "field": "stroke_cost",
+                        "scaling_factor": 1
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info": {
+                "label": "Stroke\nwork\n(J)",
+                "series": [
+                    {
+                        "field": "stroke_work",
+                        "scaling_factor": 1
+                    }
+                ]
+            }
+        },
+        {
+            "column": 2,
+            "y_info": {
+                "label": "Efficiency",
+                "series": [
+                    {
+                        "field": "efficiency",
+                        "scaling_factor": 1
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Half-\nsarcomere\nlength\n(nm)",
+                "scaling_type": "close_fit",
+                "series": [
+                    {
+                        "field": "hs_length"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Wall\nstress\n(kN m$\\mathregular{^{-2}}$)",
+                "series": [
+                    {
+                        "field": "hs_stress",
+                        "field_label": "Total",
+                        "scaling_factor": 0.001
+                    },
+                    {
+                        "field": "cb_stress",
+                        "field_label": "Active",
+                        "scaling_factor": 0.001
+                    },
+                    {
+                        "field": "int_pas_stress",
+                        "field_label": "Passive",
+                        "scaling_factor": 0.001
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Thin\nfilament",
+                "series": [
+                    {
+                        "field": "n_off",
+                        "field_label": "OFF"
+                    },
+                    {
+                        "field": "n_on",
+                        "field_label": "ON"
+                    }
+                ]
+            }
+        },
+        {
+            "column": 1,
+            "y_info": {
+                "label": "Thick\nfilament",
+                "series": [
+                    {
+                        "field": "M_SRX",
+                        "field_label": "SRX"
+                    },
+                    {
+                        "field": "M_DRX",
+                        "field_label": "DRX"
+                    },
+                    {
+                        "field": "M_PRE",
+                        "field_label": "PRE"
+                    },
+                    {
+                        "field": "M_POST",
+                        "field_label": "POST"
+                    }
+                ]
+            }
+        }
+    ]
+}
